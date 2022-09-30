@@ -174,6 +174,10 @@
 			url = "github:lewis6991/gitsigns.nvim";
 			flake = false;
 		};
+		octo-nvim = {
+			url = "github:pwntester/octo.nvim";
+			flake = false;
+		};
 
 		# Indent lines
 		indent-blankline-nvim = {
@@ -274,6 +278,7 @@
 				"nvim-autopairs"
 				"nvim-ts-autotag"
 				"gitsigns-nvim"
+				"octo-nvim"
 				"indent-blankline-nvim"
 				"neorg"
 				"comment-nvim"

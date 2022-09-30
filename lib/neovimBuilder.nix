@@ -19,6 +19,7 @@
 		neo-tree-nvim
 		telescope-nvim
 		project-nvim
+		octo-nvim
 		nvim-treesitter
 		nvim-treesitter-textobjects
 		nvim-ts-autotag
