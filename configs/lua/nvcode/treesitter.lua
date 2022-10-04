@@ -34,7 +34,7 @@ configs.setup {
 				["@function.outer"] = "v",
 				["@class.outer"] = "v"
 			},
-			invlude_surrounding_whitespace = true
+			include_surrounding_whitespace = true
 		},
 		move = {
 			enable = true,
