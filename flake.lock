@@ -439,22 +439,6 @@
         "type": "github"
       }
     },
-    "nvim-colorizer-lua": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1664344967,
-        "narHash": "sha256-pHdNHjR3QgnYnnP1Ay56cJuwRZ0AzqagdB4gM9Hvu9I=",
-        "owner": "NvChad",
-        "repo": "nvim-colorizer.lua",
-        "rev": "9dd7ecde55b06b5114e1fa67c522433e7e59db8b",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NvChad",
-        "repo": "nvim-colorizer.lua",
-        "type": "github"
-      }
-    },
     "nvim-dap": {
       "flake": false,
       "locked": {
@@ -691,7 +675,6 @@
         "nvim-autopairs": "nvim-autopairs",
         "nvim-cmp": "nvim-cmp",
         "nvim-cokeline": "nvim-cokeline",
-        "nvim-colorizer-lua": "nvim-colorizer-lua",
         "nvim-dap": "nvim-dap",
         "nvim-dap-ui": "nvim-dap-ui",
         "nvim-lspconfig": "nvim-lspconfig",
@@ -718,11 +701,11 @@
     "schemastore-nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1664385206,
-        "narHash": "sha256-EwsUfhStlO378z/3d6hwfmMGUHDoRmsy9YOMCCUqn4w=",
+        "lastModified": 1664903545,
+        "narHash": "sha256-Qv1Pt325jdnS4jRtdvOH9dy9r9Y5od4DmvRWzORvj8Y=",
         "owner": "b0o",
         "repo": "SchemaStore.nvim",
-        "rev": "33873c71335a31988b62025c3b2224f3a9fe8e15",
+        "rev": "faf602afe86b4cc33a4471371f128d80328cacf2",
         "type": "github"
       },
       "original": {
