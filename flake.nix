@@ -224,10 +224,6 @@
 		};
 
 		# Colors
-		nvim-colorizer-lua = {
-			url = "github:NvChad/nvim-colorizer.lua";
-			flake = false;
-		};
 		ccc-nvim = {
 			url = "github:uga-rosa/ccc.nvim";
 			flake = false;
@@ -296,7 +292,6 @@
 				"todo-comments-nvim"
 				"zen-mode-nvim"
 				"twilight-nvim"
-				"nvim-colorizer-lua"
 				"ccc-nvim"
 				"leap-nvim"
 			];

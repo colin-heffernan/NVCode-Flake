@@ -8,10 +8,8 @@ local onFileOpen = function()
 	require("nvcode.neorg")
 	require("nvcode.comment")
 	require("nvcode.zen")
-	require("nvcode.colorizer")
 	require("nvcode.trouble")
 	require("nvcode.todo")
-	require("nvcode.ccc")
 	require("nvcode.leap")
 end
 

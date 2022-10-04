@@ -24,6 +24,7 @@
 		nvim-treesitter-textobjects
 		nvim-ts-autotag
 		nvim-ts-context-commentstring
+		ccc-nvim
 		toggleterm-nvim
 		nvim-cmp
 		cmp-path
@@ -43,8 +44,6 @@
 		comment-nvim
 		twilight-nvim
 		zen-mode-nvim
-		nvim-colorizer-lua
-		ccc-nvim
 		leap-nvim
 		nvim-autopairs
 		trouble-nvim
