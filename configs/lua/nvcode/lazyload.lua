@@ -1,7 +1,6 @@
 -- Load configs for lazyloaded plugins on BufRead and BufNewFile
 local onFileOpen = function()
 	require("nvcode.lsp")
-	require("nvcode.cmp")
 	require("nvcode.dap")
 	require("nvcode.indentblankline")
 	require("nvcode.gitsigns")

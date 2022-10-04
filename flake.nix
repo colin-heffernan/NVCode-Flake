@@ -66,6 +66,10 @@
 			url = "github:goolord/alpha-nvim";
 			flake = false;
 		};
+		noice-nvim = {
+			url = "github:folke/noice.nvim";
+			flake = false;
+		};
 
 		# File exploration
 		neo-tree-nvim = {
@@ -255,6 +259,7 @@
 				"lualine-nvim"
 				"nvim-cokeline"
 				"alpha-nvim"
+				"noice-nvim"
 				"neo-tree-nvim"
 				"telescope-nvim"
 				"project-nvim"

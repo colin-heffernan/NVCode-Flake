@@ -1,20 +1,3 @@
-vim.api.nvim_exec(
-	[[
-		packadd friendly-snippets
-		packadd nvim-cmp
-		packadd cmp-path
-		runtime after/plugin/cmp_path.lua
-		packadd cmp-calc
-		runtime after/plugin/cmp_calc.lua
-		packadd cmp-nvim-lsp
-		runtime after/plugin/cmp_nvim_lsp.lua
-		packadd luasnip
-		packadd cmp_luasnip
-		runtime after/plugin/cmp_luasnip.lua
-	]],
-	true
-)
-
 local cmp_status_ok, cmp = pcall(require, "cmp")
 if not cmp_status_ok then
 	vim.notify "CMP not found."

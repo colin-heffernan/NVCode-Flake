@@ -25,6 +25,15 @@
 		nvim-ts-autotag
 		nvim-ts-context-commentstring
 		toggleterm-nvim
+		friendly-snippets
+		nvim-cmp
+		cmp-path
+		cmp-calc
+		cmp-nvim-lsp
+		cmp-buffer
+		luasnip
+		cmp_luasnip
+		noice-nvim
 	];
 	optPlugins = with pkgs.neovimPlugins; [
 		nvim-lspconfig
@@ -41,14 +50,6 @@
 		nvim-colorizer-lua
 		ccc-nvim
 		leap-nvim
-		friendly-snippets
-		nvim-cmp
-		cmp-path
-		cmp-calc
-		cmp-nvim-lsp
-		cmp-buffer
-		luasnip
-		cmp_luasnip
 		nvim-autopairs
 		trouble-nvim
 		todo-comments-nvim
