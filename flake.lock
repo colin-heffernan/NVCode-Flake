@@ -64,6 +64,22 @@
         "type": "github"
       }
     },
+    "cmp-cmdline": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1663329933,
+        "narHash": "sha256-IvMI9wHN1llFLpgMGwm6yr60UJ6gaWBnZaxNHXCDOwI=",
+        "owner": "hrsh7th",
+        "repo": "cmp-cmdline",
+        "rev": "c66c379915d68fb52ad5ad1195cdd4265a95ef1e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hrsh7th",
+        "repo": "cmp-cmdline",
+        "type": "github"
+      }
+    },
     "cmp-nvim-lsp": {
       "flake": false,
       "locked": {
@@ -324,6 +340,22 @@
         "owner": "nixos",
         "ref": "nixos-unstable",
         "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "noice-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1664834086,
+        "narHash": "sha256-VEcKCJ59NS7PeboljofdTlYzSM+bk8xbS8Cbxwv6Zpg=",
+        "owner": "folke",
+        "repo": "noice.nvim",
+        "rev": "664f3214df392ff9bb3a8b933d01db244049fe0f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "folke",
+        "repo": "noice.nvim",
         "type": "github"
       }
     },
@@ -637,6 +669,7 @@
         "ccc-nvim": "ccc-nvim",
         "cmp-buffer": "cmp-buffer",
         "cmp-calc": "cmp-calc",
+        "cmp-cmdline": "cmp-cmdline",
         "cmp-nvim-lsp": "cmp-nvim-lsp",
         "cmp-path": "cmp-path",
         "cmp_luasnip": "cmp_luasnip",
@@ -652,6 +685,7 @@
         "neorg": "neorg",
         "neovim-nightly": "neovim-nightly",
         "nixpkgs": "nixpkgs",
+        "noice-nvim": "noice-nvim",
         "nui-nvim": "nui-nvim",
         "null-ls-nvim": "null-ls-nvim",
         "nvim-autopairs": "nvim-autopairs",

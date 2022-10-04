@@ -25,14 +25,10 @@
 		nvim-ts-autotag
 		nvim-ts-context-commentstring
 		toggleterm-nvim
-		friendly-snippets
 		nvim-cmp
 		cmp-path
-		cmp-calc
-		cmp-nvim-lsp
 		cmp-buffer
-		luasnip
-		cmp_luasnip
+		cmp-cmdline
 		noice-nvim
 	];
 	optPlugins = with pkgs.neovimPlugins; [
@@ -53,6 +49,11 @@
 		nvim-autopairs
 		trouble-nvim
 		todo-comments-nvim
+		friendly-snippets
+		cmp-calc
+		cmp-nvim-lsp
+		luasnip
+		cmp_luasnip
 	];
 in wrapNvcode myNeovimUnwrapped {
 	viAlias = true;

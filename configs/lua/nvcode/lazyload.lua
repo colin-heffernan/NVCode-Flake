@@ -2,6 +2,7 @@
 local onFileOpen = function()
 	require("nvcode.lsp")
 	require("nvcode.dap")
+	require("nvcode.cmp.lazy")
 	require("nvcode.indentblankline")
 	require("nvcode.gitsigns")
 	require("nvcode.neorg")

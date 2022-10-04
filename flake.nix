@@ -148,6 +148,10 @@
 			url = "github:hrsh7th/cmp-buffer";
 			flake = false;
 		};
+		cmp-cmdline = {
+			url = "github:hrsh7th/cmp-cmdline";
+			flake = false;
+		};
 		cmp_luasnip = {
 			url = "github:saadparwaiz1/cmp_luasnip";
 			flake = false;
@@ -277,6 +281,7 @@
 				"cmp-calc"
 				"cmp-nvim-lsp"
 				"cmp-buffer"
+				"cmp-cmdline"
 				"cmp_luasnip"
 				"luasnip"
 				"friendly-snippets"
