@@ -10,10 +10,19 @@ if not status_ok then
 	vim.notify "Autopairs not found."
 	return
 end
+local Rule = require "nvim-autopairs.rule"
+local conds = require "nvim-autopairs.conds"
 
 npairs.setup {
 	check_ts = true,
 	disable_filetype = { "TelescopePrompt" }
+}
+
+npairs.add_rules {
+	Rule(" ", " ")
+		:with_pair(conds.before_regex("^[([{]$", 1))
+		:with_pair(conds.after_regex("^[)]}]$", 1))
+		:with_del(conds.before_regex("^[([{]$", 1))
 }
 
 local cmp_autopairs = require "nvim-autopairs.completion.cmp"
