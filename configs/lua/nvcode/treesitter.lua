@@ -5,6 +5,9 @@ if not status_ok then
 end
 
 configs.setup {
+	autopairs = {
+		enable = true,
+	},
 	autotag = {
 		enable = true,
 	},
