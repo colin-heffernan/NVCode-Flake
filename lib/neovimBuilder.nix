@@ -47,6 +47,7 @@
 		leap-nvim
 		nvim-autopairs
 		trouble-nvim
+		lspsaga-nvim
 		todo-comments-nvim
 		friendly-snippets
 		cmp-calc

@@ -116,6 +116,10 @@
 			url = "github:folke/trouble.nvim";
 			flake = false;
 		};
+		lspsaga-nvim = {
+			url = "github:glepnir/lspsaga.nvim";
+			flake = false;
+		};
 
 		# Debugging
 		nvim-dap = {
@@ -270,6 +274,7 @@
 				"nvim-treesitter"
 				"nvim-treesitter-textobjects"
 				"trouble-nvim"
+				"lspsaga-nvim"
 				"nvim-dap"
 				"nvim-dap-ui"
 				"nvim-cmp"

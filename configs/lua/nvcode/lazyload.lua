@@ -9,6 +9,7 @@ local onFileOpen = function()
 	require("nvcode.comment")
 	require("nvcode.zen")
 	require("nvcode.trouble")
+	require("nvcode.lspsaga")
 	require("nvcode.todo")
 	require("nvcode.leap")
 end

@@ -43,6 +43,10 @@ keymap("n", "<Space>fo", ":Telescope oldfiles<CR>", opts)
 keymap("n", "<Space>fg", ":Telescope live_grep<CR>", opts)
 keymap("n", "<Space>fp", ":Telescope projects<CR>", opts)
 
+-- LSPSaga
+keymap("n", "<Space>lf", ":Lspsaga lsp_finder<CR>", opts)
+keymap("n", "<Space>la", ":Lspsaga code_action<CR>", opts)
+
 -- Visual
 -- Indents
 keymap("v", "<", "<gv", opts)
