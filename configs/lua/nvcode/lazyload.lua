@@ -12,7 +12,6 @@ local function onFileOpen()
 	require("nvcode.lspsaga")
 	require("nvcode.todo")
 	require("nvcode.leap")
-	require("nvcode.cursorline")
 end
 
 vim.api.nvim_create_autocmd(
