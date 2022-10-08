@@ -455,6 +455,22 @@
         "type": "github"
       }
     },
+    "nvim-cursorline": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1650034925,
+        "narHash": "sha256-Uhw65p1KBjs8KsVOmTzuiu3XKclxBob8AVdWEt30C/8=",
+        "owner": "yamatsum",
+        "repo": "nvim-cursorline",
+        "rev": "804f0023692653b2b2368462d67d2a87056947f9",
+        "type": "github"
+      },
+      "original": {
+        "owner": "yamatsum",
+        "repo": "nvim-cursorline",
+        "type": "github"
+      }
+    },
     "nvim-dap": {
       "flake": false,
       "locked": {
@@ -692,6 +708,7 @@
         "nvim-autopairs": "nvim-autopairs",
         "nvim-cmp": "nvim-cmp",
         "nvim-cokeline": "nvim-cokeline",
+        "nvim-cursorline": "nvim-cursorline",
         "nvim-dap": "nvim-dap",
         "nvim-dap-ui": "nvim-dap-ui",
         "nvim-lspconfig": "nvim-lspconfig",

@@ -239,6 +239,12 @@
 			flake = false;
 		};
 
+		# Cursorline
+		nvim-cursorline = {
+			url = "github:yamatsum/nvim-cursorline";
+			flake = false;
+		};
+
 		##### Language Servers
 		# All following Nixpkgs for now
 
@@ -299,6 +305,7 @@
 				"twilight-nvim"
 				"ccc-nvim"
 				"leap-nvim"
+				"nvim-cursorline"
 			];
 			pluginOverlay = lib.buildPluginOverlay;
 			pkgs = import nixpkgs {
