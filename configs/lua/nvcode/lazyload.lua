@@ -1,5 +1,5 @@
 -- Load configs for lazyloaded plugins on BufRead and BufNewFile
-local onFileOpen = function()
+local function onFileOpen()
 	require("nvcode.lsp")
 	require("nvcode.dap")
 	require("nvcode.cmp.lazy")
@@ -22,7 +22,7 @@ vim.api.nvim_create_autocmd(
 )
 
 -- Load configs for lazyloaded plugins on InsertEnter
-local onInsert = function ()
+local function onInsert()
 	require("nvcode.autopairs")
 end
 
