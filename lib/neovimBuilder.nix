@@ -31,7 +31,6 @@
 		cmp-buffer
 		cmp-cmdline
 		noice-nvim
-		nvim-cursorline
 	];
 	optPlugins = with pkgs.neovimPlugins; [
 		nvim-lspconfig
