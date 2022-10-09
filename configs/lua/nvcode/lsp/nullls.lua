@@ -15,6 +15,7 @@ local diagnostics = null_ls.builtins.diagnostics
 null_ls.setup {
 	debug = true,
 	sources = {
+		diagnostics.chktex,
 		diagnostics.eslint,
 		diagnostics.jsonlint,
 		diagnostics.luacheck,

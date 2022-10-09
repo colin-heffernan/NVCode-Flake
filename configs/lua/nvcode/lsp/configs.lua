@@ -4,7 +4,21 @@ if not status_ok then
 	return
 end
 
-local servers = { "bashls", "clangd", "cssls", "hls", "html", "jsonls", "pyright", "rnix", "rust_analyzer", "sumneko_lua", "svelte", "tsserver" }
+local servers = {
+	"bashls",
+	"clangd",
+	"cssls",
+	"hls",
+	"html",
+	"jsonls",
+	"pyright",
+	"rnix",
+	"rust_analyzer",
+	"sumneko_lua",
+	"svelte",
+	"texlab",
+	"tsserver"
+}
 
 for _, server in pairs(servers) do
 	local opts = {
