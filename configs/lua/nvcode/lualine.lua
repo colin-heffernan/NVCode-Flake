@@ -5,5 +5,15 @@ if not status_ok then
 end
 
 lualine.setup {
-	options = { globalstatus = true, },
+	options = {
+		globalstatus = true
+	},
+	sections = {
+		lualine_a = {"mode"},
+		lualine_b = {"filetype"},
+		lualine_c = {},
+		lualine_x = {},
+		lualine_y = {"diagnostics"},
+		lualine_z = {"branch", "diff"}
+	}
 }
