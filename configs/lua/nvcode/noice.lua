@@ -5,4 +5,12 @@ if not status_ok then
 end
 
 noice.setup {
+	lsp = {
+		signature = {
+			enabled = false
+		},
+		hover = {
+			enabled = false
+		}
+	}
 }
