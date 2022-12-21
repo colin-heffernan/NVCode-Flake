@@ -20,10 +20,10 @@
 		telescope-nvim
 		project-nvim
 		octo-nvim
-		nvim-treesitter
-		nvim-treesitter-textobjects
-		nvim-ts-autotag
-		nvim-ts-context-commentstring
+		# nvim-treesitter
+		# nvim-treesitter-textobjects
+		# nvim-ts-autotag
+		# nvim-ts-context-commentstring
 		ccc-nvim
 		toggleterm-nvim
 		nvim-cmp
