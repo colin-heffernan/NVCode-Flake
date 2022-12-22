@@ -1,6 +1,6 @@
 { lib
 , pkgs
-, buildLuarocksPackage
+, lua
 }:
 let
    /* returns everything needed for the caller to wrap its own neovim:
@@ -186,7 +186,7 @@ in
   inherit legacyWrapper;
 
   buildNeovimPluginFrom2Nix = lib.callPackage ./build-neovim-plugin.nix {
-    inherit (pkgs.vimUtils) buildVimPluginFrom2Nix toVimPlugin;
-    inherit buildLuarocksPackage;
+    inherit (pkgs.vimUtils) toVimPlugin;
+    inherit lua;
   };
 }
