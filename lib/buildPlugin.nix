@@ -1,7 +1,7 @@
 { pkgs, inputs, plugins, ... }: final: prev: let
 	inherit (prev.vimUtils) buildVimPluginFrom2Nix;
 
-	treesitterGrammars = prev.tree-sitter.withPlugins (plugins: with plugins; [
+	treesitterGrammars = prev.tree-sitter.withPlugins (grammars: with grammars; [
 		tree-sitter-bash
 		tree-sitter-c
 		tree-sitter-cpp
