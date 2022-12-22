@@ -2,7 +2,8 @@
 	neovimPlugins = pkgs.neovimPlugins;
 	myNeovimUnwrapped = pkgs.neovim-unwrapped;
 	nvcodeUtils = pkgs.callPackage ./utils.nix {
-		inherit (pkgs.lua51Packages) buildLuarocksPackage;
+		# inherit (pkgs.lua51Packages) buildLuarocksPackage;
+		lua = pkgs.lua5_1;
 	};
 	wrapNvcode = neovim-unwrapped: lib.makeOverridable (nvcodeUtils.legacyWrapper neovim-unwrapped);
 	startPlugins = with pkgs.neovimPlugins; [
