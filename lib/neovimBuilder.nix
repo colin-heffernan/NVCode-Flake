@@ -21,7 +21,7 @@
 		neovimPlugins.telescope-nvim
 		neovimPlugins.project-nvim
 		neovimPlugins.octo-nvim
-		(nvim-treesitter.withPlugins (plugins: with plugins; [
+		(vimPlugins.nvim-treesitter.withPlugins (plugins: with plugins; [
 			bash
 			c
 			cpp
