@@ -13,7 +13,7 @@ require("nvcode.cokeline")
 require("nvcode.neotree")
 require("nvcode.telescope")
 require("nvcode.project")
-require("nvcode.octo")
+--[[ require("nvcode.octo") ]]
 require("nvcode.toggleterm")
 require("nvcode.cmp.auto")
 require("nvcode.noice")
