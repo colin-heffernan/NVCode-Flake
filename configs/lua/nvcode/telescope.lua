@@ -21,5 +21,5 @@ telescope.setup {
 }
 
 telescope.load_extension("notify")
-# telescope.load_extension("octo")
+-- telescope.load_extension("octo")
 telescope.load_extension("projects")
