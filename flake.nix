@@ -160,7 +160,7 @@
 		# 	url = "github:saadparwaiz1/cmp_luasnip";
 		# 	flake = false;
 		# };
-		# 
+		#
 		# # Snippets
 		# luasnip = {
 		# 	url = "github:L3MON4D3/LuaSnip";
@@ -180,7 +180,7 @@
 		# 	url = "github:windwp/nvim-ts-autotag";
 		# 	flake = false;
 		# };
-		# 
+		#
 		# # Git
 		# gitsigns-nvim = {
 		# 	url = "github:lewis6991/gitsigns.nvim";
