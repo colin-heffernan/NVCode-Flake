@@ -1,7 +1,7 @@
 vim.api.nvim_exec(
 	[[
-		packadd twilight-nvim
-		packadd zen-mode-nvim
+		packadd twilight.nvim
+		packadd zen-mode.nvim
 	]],
 	true
 )

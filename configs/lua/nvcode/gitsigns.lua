@@ -1,6 +1,6 @@
 vim.api.nvim_exec(
 	[[
-		packadd gitsigns-nvim
+		packadd gitsigns.nvim
 	]],
 	true
 )

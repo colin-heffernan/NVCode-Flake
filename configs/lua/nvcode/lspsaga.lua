@@ -1,6 +1,6 @@
 vim.api.nvim_exec(
 	[[
-		packadd lspsaga-nvim
+		packadd lspsaga.nvim
 	]],
 	true
 )

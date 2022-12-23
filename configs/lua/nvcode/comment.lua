@@ -1,6 +1,6 @@
 vim.api.nvim_exec(
 	[[
-		packadd comment-nvim
+		packadd comment.nvim
 	]],
 	true
 )

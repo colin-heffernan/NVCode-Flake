@@ -1,7 +1,7 @@
 vim.api.nvim_exec(
 	[[
 		packadd nvim-lspconfig
-		packadd null-ls-nvim
+		packadd null-ls.nvim
 		packadd schemastore-nvim
 	]],
 	true

@@ -1,6 +1,6 @@
 vim.api.nvim_exec(
 	[[
-		packadd leap-nvim
+		packadd leap.nvim
 	]],
 	true
 )

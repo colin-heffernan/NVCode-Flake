@@ -1,6 +1,6 @@
 vim.api.nvim_exec(
 	[[
-		packadd trouble-nvim
+		packadd trouble.nvim
 	]],
 	true
 )
