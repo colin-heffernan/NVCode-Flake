@@ -6,22 +6,22 @@
 		lua = pkgs.lua5_1;
 	};
 	wrapNvcode = neovim-unwrapped: lib.makeOverridable (nvcodeUtils.legacyWrapper neovim-unwrapped);
-	startPlugins = with pkgs; [
-		neovimPlugins.plenary-nvim
-		neovimPlugins.nui-nvim
-		neovimPlugins.popup-nvim
-		neovimPlugins.nvim-notify
-		neovimPlugins.hydra-nvim
-		neovimPlugins.nvim-web-devicons
-		neovimPlugins.tokyonight-nvim
-		neovimPlugins.lualine-nvim
-		neovimPlugins.nvim-cokeline
-		neovimPlugins.alpha-nvim
-		neovimPlugins.neo-tree-nvim
-		neovimPlugins.telescope-nvim
-		neovimPlugins.project-nvim
-		neovimPlugins.octo-nvim
-		(vimPlugins.nvim-treesitter.withPlugins (plugins: with plugins; [
+	startPlugins = with pkgs.vimPlugins; [
+		plenary-nvim
+		nui-nvim
+		popup-nvim
+		nvim-notify
+		hydra-nvim
+		nvim-web-devicons
+		tokyonight-nvim
+		lualine-nvim
+		nvim-cokeline
+		alpha-nvim
+		neo-tree-nvim
+		telescope-nvim
+		project-nvim
+		# nvim-treesitter						# For building plugins from source
+		(nvim-treesitter.withPlugins (plugins: with plugins; [		# For using Nixpkgs plugins
 			bash
 			c
 			cpp
@@ -43,39 +43,39 @@
 			typescript
 			vim
 		]))
-		neovimPlugins.nvim-treesitter-textobjects
-		neovimPlugins.nvim-ts-autotag
-		neovimPlugins.nvim-ts-context-commentstring
-		neovimPlugins.ccc-nvim
-		neovimPlugins.toggleterm-nvim
-		neovimPlugins.nvim-cmp
-		neovimPlugins.cmp-path
-		neovimPlugins.cmp-buffer
-		neovimPlugins.cmp-cmdline
-		neovimPlugins.noice-nvim
+		nvim-treesitter-textobjects
+		nvim-ts-autotag
+		nvim-ts-context-commentstring
+		ccc-nvim
+		toggleterm-nvim
+		nvim-cmp
+		cmp-path
+		cmp-buffer
+		cmp-cmdline
+		noice-nvim
 	];
-	optPlugins = with pkgs; [
-		neovimPlugins.nvim-lspconfig
-		neovimPlugins.null-ls-nvim
-		neovimPlugins.schemastore-nvim
-		neovimPlugins.nvim-dap
-		neovimPlugins.nvim-dap-ui
-		neovimPlugins.indent-blankline-nvim
-		neovimPlugins.gitsigns-nvim
-		neovimPlugins.neorg
-		neovimPlugins.comment-nvim
-		neovimPlugins.twilight-nvim
-		neovimPlugins.zen-mode-nvim
-		neovimPlugins.leap-nvim
-		neovimPlugins.nvim-autopairs
-		neovimPlugins.trouble-nvim
-		neovimPlugins.lspsaga-nvim
-		neovimPlugins.todo-comments-nvim
-		neovimPlugins.friendly-snippets
-		neovimPlugins.cmp-calc
-		neovimPlugins.cmp-nvim-lsp
-		neovimPlugins.luasnip
-		neovimPlugins.cmp_luasnip
+	optPlugins = with pkgs.vimPlugins; [
+		nvim-lspconfig
+		null-ls-nvim
+		SchemaStore-nvim
+		nvim-dap
+		nvim-dap-ui
+		indent-blankline-nvim
+		gitsigns-nvim
+		neorg
+		comment-nvim
+		twilight-nvim
+		zen-mode-nvim
+		leap-nvim
+		nvim-autopairs
+		trouble-nvim
+		lspsaga-nvim
+		todo-comments-nvim
+		friendly-snippets
+		cmp-calc
+		cmp-nvim-lsp
+		luasnip
+		cmp_luasnip
 	];
 in wrapNvcode myNeovimUnwrapped {
 	viAlias = true;
