@@ -305,9 +305,9 @@
 				inherit system neovim-nightly;
 				overlays = [
 					pluginOverlay
-					# (final: prev: {
-					# 	neovim-unwrapped = neovim-nightly.packages.${prev.system}.neovim;
-					# })
+					(final: prev: {
+						neovim-unwrapped = neovim-nightly.packages.${prev.system}.neovim;
+					})
 				];
 			};
 			lib = import ./lib { inherit pkgs inputs plugins; };
