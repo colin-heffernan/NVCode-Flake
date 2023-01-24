@@ -306,7 +306,7 @@
 				overlays = [
 					pluginOverlay
 					(final: prev: {
-						neovim-unwrapped = neovim-nightly.packages.${prev.system}.neovim;
+						# neovim-unwrapped = neovim-nightly.packages.${prev.system}.neovim;
 					})
 				];
 			};
