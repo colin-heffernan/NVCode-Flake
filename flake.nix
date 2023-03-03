@@ -306,7 +306,11 @@
 				overlays = [
 					pluginOverlay
 					(final: prev: {
-						neovim-unwrapped = neovim-nightly.packages.${prev.system}.neovim;
+						neovim-unwrapped = neovim-nightly.packages.${prev.system}.neovim.overrideAttrs (old: {
+							patches = builtins.filter (p:
+								(if builtins.typeOf p == "set" then baseNameOf p.name else baseNameOf) != "neovim-build-make-generated-source-files-reproducible.patch")
+							old.patches;
+						});
 					})
 				];
 			};
