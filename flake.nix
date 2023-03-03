@@ -306,12 +306,12 @@
 				overlays = [
 					pluginOverlay
 					(final: prev: {
-						# neovim-unwrapped = neovim-nightly.packages.${prev.system}.neovim;
+						neovim-unwrapped = neovim-nightly.packages.${prev.system}.neovim;
 					})
 				];
 			};
 			lib = import ./lib { inherit pkgs inputs plugins; };
-			neovimBuilder = lib.neovimBuilder;
+			inherit (lib) neovimBuilder;
 		in rec {
 			apps.${system} = rec {
 				nvim = {
@@ -329,8 +329,8 @@
 
 			overlays.default = final: prev: rec {
 				inherit neovimBuilder;
-				nvcode = packages.${system}.nvcode;
-				neovimPlugins = pkgs.neovimPlugins;
+				inherit (packages.${system}) nvcode;
+				inherit (pkgs) neovimPlugins;
 			};
 
 			packages.${system} = rec {

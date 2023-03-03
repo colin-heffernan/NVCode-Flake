@@ -34,7 +34,7 @@ let
       src = ../configs;
       installPhase = "cp -r . $out";
     };
-    makeWrapper = pkgs.makeWrapper;
+    inherit (pkgs) makeWrapper;
     wrapperArgsStr = if isString wrapperArgs then wrapperArgs else lib.escapeShellArgs wrapperArgs;
 
     # If configure != {}, we can't generate the rplugin.vim file with e.g

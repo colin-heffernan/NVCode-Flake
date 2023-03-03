@@ -53,7 +53,7 @@ let
 
       pluginRC = lib.foldl (acc: p: if p.config != null then acc ++ [p.config] else acc) []  pluginsNormalized;
 
-      pluginsPartitioned = lib.partition (x: x.optional == true) pluginsNormalized;
+      pluginsPartitioned = lib.partition (x: x.optional) pluginsNormalized;
       requiredPlugins = pkgs.vimUtils.requiredPluginsForPackage myVimPackage;
       getDeps = attrname: map (plugin: plugin.${attrname} or (_: [ ]));
       myVimPackage = {
@@ -67,7 +67,7 @@ let
         ++ (extraPython3Packages ps)
         ++ (lib.concatMap (f: f ps) pluginPython3Packages));
 
-      luaEnv = pkgs.neovim-unwrapped.lua.withPackages(extraLuaPackages);
+      luaEnv = pkgs.neovim-unwrapped.lua.withPackages extraLuaPackages;
 
       # Mapping a boolean argument to a key that tells us whether to add or not to
       # add to nvim's 'embedded rc' this:
@@ -81,6 +81,8 @@ let
         python3 = withPython3;
         ruby = withRuby;
       };
+      # as expected by packdir
+      packpathDirs.myNeovimPackages = myVimPackage;
       ## Here we calculate all of the arguments to the 1st call of `makeWrapper`
       # We start with the executable itself NOTE we call this variable "initial"
       # because if configure != {} we need to call makeWrapper twice, in order to
@@ -112,17 +114,18 @@ let
           "--prefix" "LUA_CPATH" ";" (pkgs.neovim-unwrapped.lua.pkgs.luaLib.genLuaCPathAbsStr luaEnv)
         ];
 
-      manifestRc = pkgs.vimUtils.vimrcContent ({ customRC = ""; }) ;
+      manifestRc = pkgs.vimUtils.vimrcContent { customRC = ""; };
       # we call vimrcContent without 'packages' to avoid the init.vim generation
-      neovimRcContent = pkgs.vimUtils.vimrcContent ({
+      neovimRcContent = pkgs.vimUtils.vimrcContent {
         beforePlugins = "";
         customRC = lib.concatStringsSep "\n" (pluginRC ++ [customRC]);
         packages = null;
-      });
+      };
     in
 
     builtins.removeAttrs args ["plugins"] // {
       wrapperArgs = makeWrapperArgs;
+      inherit packpathDirs;
       inherit neovimRcContent;
       inherit manifestRc;
       inherit python3Env;
@@ -178,7 +181,7 @@ let
     in
     wrapNvcodeUnstable neovim (res // {
       wrapperArgs = lib.escapeShellArgs res.wrapperArgs + " " + extraMakeWrapperArgs;
-      wrapRc = (configure != {});
+      wrapRc = configure != {};
   });
 in
 {

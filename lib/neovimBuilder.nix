@@ -1,5 +1,5 @@
 { pkgs, lib ? pkgs.lib, ... }: let
-	neovimPlugins = pkgs.neovimPlugins;
+	inherit (pkgs) neovimPlugins;
 	myNeovimUnwrapped = pkgs.neovim-unwrapped;
 	nvcodeUtils = pkgs.callPackage ./utils.nix {
 		# inherit (pkgs.lua51Packages) buildLuarocksPackage;
