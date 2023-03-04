@@ -46,7 +46,7 @@
 		inherit (pkgs.vimUtils.buildVimPluginFrom2Nix);
 	};
 
-	neovimPluginsBase = builtins.listToAttrs (map (name: { inherit name; value = buildPlug name; }) plugins);
+	neovimPluginsBase = map (name: { inherit name; value = buildPlug name; }) plugins;
 in {
 	neovimPlugins = pkgs.lib.makeExtensible (pkgs.lib.extends overrides (pkgs.lib.extends neovimPluginsBase initialPlugins));
 }
