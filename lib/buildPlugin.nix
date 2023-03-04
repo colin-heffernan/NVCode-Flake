@@ -40,9 +40,15 @@
 		# else "";
 	};
 
-	overrides = pkgs.callPackage ./override.nix {
-		inherit (pkgs inputs grammars);
-	} grammars;
+	# overrides = pkgs.callPackage ./override.nix {
+	# 	inherit (pkgs inputs grammars);
+	# };
+
+	overrides = final: prev: {
+		nvim-treesitter = prev.nvim-treesitter.overrideAttrs (old:
+			pkgs.callPackage ./treesitterOverrides.nix { inherit pkgs inputs grammars; } final prev
+		);
+	};
 
 	neovimPluginsBase = self: builtins.listToAttrs (map (name: { inherit name; value = buildPlug name; }) plugins);
 in {
