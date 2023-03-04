@@ -250,6 +250,106 @@
 			url = "github:tree-sitter/tree-sitter-bash";
 			flake = false;
 		};
+		tree-sitter-c = {
+			url = "github:tree-sitter/tree-sitter-c";
+			flake = false;
+		};
+		tree-sitter-cpp = {
+			url = "github:tree-sitter/tree-sitter-cpp";
+			flake = false;
+		};
+		tree-sitter-css = {
+			url = "github:tree-sitter/tree-sitter-css";
+			flake = false;
+		};
+		tree-sitter-dockerfile = {
+			url = "github:camdencheek/tree-sitter-dockerfile";
+			flake = false;
+		};
+		tree-sitter-gdscript = {
+			url = "github:PrestonKnopp/tree-sitter-gdscript";
+			flake = false;
+		};
+		tree-sitter-gitignore = {
+			url = "github:shunsambongi/tree-sitter-gitignore";
+			flake = false;
+		};
+		tree-sitter-graphql = {
+			url = "github:bkegley/tree-sitter-graphql";
+			flake = false;
+		};
+		tree-sitter-haskell = {
+			url = "github:tree-sitter/tree-sitter-haskell";
+			flake = false;
+		};
+		tree-sitter-html = {
+			url = "github:tree-sitter/tree-sitter-html";
+			flake = false;
+		};
+		tree-sitter-javascript = {
+			url = "github:tree-sitter/tree-sitter-javascript";
+			flake = false;
+		};
+		tree-sitter-json = {
+			url = "github:tree-sitter/tree-sitter-json";
+			flake = false;
+		};
+		tree-sitter-latex = {
+			url = "github:latex-lsp/tree-sitter-latex";
+			flake = false;
+		};
+		tree-sitter-lua = {
+			url = "github:MunifTanjim/tree-sitter-lua";
+			flake = false;
+		};
+		tree-sitter-markdown = {
+			url = "github:Mdeiml/tree-sitter-markdown";
+			flake = false;
+		};
+		tree-sitter-nix = {
+			url = "github:cstrahan/tree-sitter-nix";
+			flake = false;
+		};
+		tree-sitter-norg = {
+			url = "github:nvim-neorg/tree-sitter-norg";
+			flake = false;
+		};
+		tree-sitter-python = {
+			url = "github:tree-sitter/tree-sitter-python";
+			flake = false;
+		};
+		tree-sitter-regex = {
+			url = "github:tree-sitter/tree-sitter-regex";
+			flake = false;
+		};
+		tree-sitter-rust = {
+			url = "github:tree-sitter/tree-sitter-rust";
+			flake = false;
+		};
+		tree-sitter-scss = {
+			url = "github:serenadeai/tree-sitter-scss";
+			flake = false;
+		};
+		tree-sitter-svelte = {
+			url = "github:Himujjal/tree-sitter-svelte";
+			flake = false;
+		};
+		tree-sitter-toml = {
+			url = "github:ikatyang/tree-sitter-toml";
+			flake = false;
+		};
+		tree-sitter-typescript = {
+			url = "github:tree-sitter/tree-sitter-typescript";
+			flake = false;
+		};
+		tree-sitter-vim = {
+			url = "github:vigoux/tree-sitter-viml";
+			flake = false;
+		};
+		tree-sitter-yuck = {
+			url = "github:Philipp-M/tree-sitter-yuck";
+			flake = false;
+		};
 	};
 
 	outputs = { self, nixpkgs, neovim-nightly, ... } @ inputs:
@@ -305,6 +405,31 @@
 			];
 			grammars = [
 				"tree-sitter-bash"
+				"tree-sitter-c"
+				"tree-sitter-cpp"
+				"tree-sitter-css"
+				"tree-sitter-dockerfile"
+				"tree-sitter-gdscript"
+				"tree-sitter-gitignore"
+				"tree-sitter-graphql"
+				"tree-sitter-haskell"
+				"tree-sitter-html"
+				"tree-sitter-javascript"
+				"tree-sitter-json"
+				"tree-sitter-latex"
+				"tree-sitter-lua"
+				"tree-sitter-markdown"
+				"tree-sitter-nix"
+				"tree-sitter-norg"
+				"tree-sitter-python"
+				"tree-sitter-regex"
+				"tree-sitter-rust"
+				"tree-sitter-scss"
+				"tree-sitter-svelte"
+				"tree-sitter-toml"
+				"tree-sitter-typescript"
+				"tree-sitter-vim"
+				"tree-sitter-yuck"
 			];
 			pluginOverlay = lib.buildPluginOverlay;
 			pkgs = import nixpkgs {
