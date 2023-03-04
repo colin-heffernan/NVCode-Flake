@@ -311,8 +311,8 @@
 								(if builtins.typeOf p == "set" then baseNameOf p.name else baseNameOf) != "neovim-build-make-generated-source-files-reproducible.patch")
 							old.patches;
 						});
-						vimPlugins.nvim-treesitter = prev.vimPlugins.nvim-treesitter.overrideAttrs (old: {
-							src = inputs.nvim-treesitter;
+						vimPlugins = prev.vimPlugins.overrideAttrs (_: {
+							nvim-treesitter.src = inputs.nvim-treesitter;
 						});
 					})
 				];
