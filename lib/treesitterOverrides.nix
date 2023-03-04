@@ -1,4 +1,4 @@
-{ pkgs, inputs, grammars }: self: super:
+{ pkgs, inputs, grammars }: final: prev:
 let
 	generatedGrammars = let
 		buildGrammar = lang: pkgs.tree-sitter.buildGrammar {
@@ -22,7 +22,7 @@ let
 	}) generatedDerivations;
 
 	withPlugins =
-		f: self.nvim-treesitter.overrideAttrs (_: {
+		f: final.nvim-treesitter.overrideAttrs (_: {
 			passthru.dependencies = map
 				(grammar: let
 					name = pkgs.lib.pipe grammar [
