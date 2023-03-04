@@ -42,7 +42,7 @@
 
 	overrides = {
 		nvim-treesitter = prev.nvim-treesitter.overrideAttrs (old:
-			callPackage ./treesitterOverrides.nix {} final prev
+			pkgs.callPackage ./treesitterOverrides.nix {} final prev
 		);
 	};
 in {
