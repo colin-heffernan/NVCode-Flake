@@ -303,11 +303,7 @@
 			flake = false;
 		};
 		tree-sitter-markdown = {
-			url = "github:Mdeiml/tree-sitter-markdown?dir=tree-sitter-markdown";
-			flake = false;
-		};
-		tree-sitter-markdown-inline = {
-			url = "github:Mdeiml/tree-sitter-markdown?dir=tree-sitter-markdown-inline";
+			url = "github:Mdeiml/tree-sitter-markdown";
 			flake = false;
 		};
 		tree-sitter-nix = {
