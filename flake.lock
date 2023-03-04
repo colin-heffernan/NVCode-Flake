@@ -741,7 +741,6 @@
         "tree-sitter-latex": "tree-sitter-latex",
         "tree-sitter-lua": "tree-sitter-lua",
         "tree-sitter-markdown": "tree-sitter-markdown",
-        "tree-sitter-markdown-inline": "tree-sitter-markdown-inline",
         "tree-sitter-nix": "tree-sitter-nix",
         "tree-sitter-norg": "tree-sitter-norg",
         "tree-sitter-python": "tree-sitter-python",
@@ -1049,7 +1048,6 @@
     "tree-sitter-markdown": {
       "flake": false,
       "locked": {
-        "dir": "tree-sitter-markdown",
         "lastModified": 1677791034,
         "narHash": "sha256-pTdAk9uhbRXBQJ7L3PUIxv+lGWkqknHIS6KqhD98uIk=",
         "owner": "Mdeiml",
@@ -1058,25 +1056,6 @@
         "type": "github"
       },
       "original": {
-        "dir": "tree-sitter-markdown",
-        "owner": "Mdeiml",
-        "repo": "tree-sitter-markdown",
-        "type": "github"
-      }
-    },
-    "tree-sitter-markdown-inline": {
-      "flake": false,
-      "locked": {
-        "dir": "tree-sitter-markdown-inline",
-        "lastModified": 1677791034,
-        "narHash": "sha256-pTdAk9uhbRXBQJ7L3PUIxv+lGWkqknHIS6KqhD98uIk=",
-        "owner": "Mdeiml",
-        "repo": "tree-sitter-markdown",
-        "rev": "10b9b5ad8742456b383908868b14709d73ff81f4",
-        "type": "github"
-      },
-      "original": {
-        "dir": "tree-sitter-markdown-inline",
         "owner": "Mdeiml",
         "repo": "tree-sitter-markdown",
         "type": "github"
