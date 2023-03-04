@@ -9,14 +9,14 @@ let
 	in
 		builtins.listToAttrs (map (name: { inherit name; value = buildGrammar name; }) grammars);
 
-	generatedDerivations = lib.filterAttrs (_: lib.isDerivation) generatedGrammars;
+	generatedDerivations = pkgs.lib.filterAttrs (_: pkgs.lib.isDerivation) generatedGrammars;
 
-	builtGrammars = generatedGrammars // lib.concatMapAttrs (k: v: 
+	builtGrammars = generatedGrammars // pkgs.lib.concatMapAttrs (k: v: 
 	let
-		replaced = lib.replaceStrings [ "_" ] [ "-" ] k;
+		replaced = pkgs.lib.replaceStrings [ "_" ] [ "-" ] k;
 	in {
 		"tree-sitter-${k}" = v;
-	} // lib.optionalAttrs (k != replaced) {
+	} // pkgs.lib.optionalAttrs (k != replaced) {
 		${replaced} = v;
 		"tree-sitter-${replaced}" = v;
 	}) generatedDerivations;
@@ -25,15 +25,15 @@ let
 		f: self.nvim-treesitter.overrideAttrs (_: {
 			passthru.dependencies = map
 				(grammar: let
-					name = lib.pipe grammar [
-						lib.getName
+					name = pkgs.lib.pipe grammar [
+						pkgs.lib.getName
 
 						# added in buildGrammar
-						(lib.removeSuffix "-grammar")
+						(pkgs.lib.removeSuffix "-grammar")
 
 						# grammars from tree-sitter.builtGrammars
-						(lib.removePrefix "tree-sitter-")
-						(lib.replaceStrings [ "-" ] [ "_" ])
+						(pkgs.lib.removePrefix "tree-sitter-")
+						(pkgs.lib.replaceStrings [ "-" ] [ "_" ])
 					];
 				in
 					runCommand "nvim-treesitter-${name}-grammar" { } ''
@@ -41,7 +41,7 @@ let
 	    					ln -s ${grammar}/parser $out/parser/${name}.so
 					''
 				)
-				(f (tree-sitter.builtGrammars // builtGrammars));
+				(f (pkgs.tree-sitter.builtGrammars // builtGrammars));
 		});
 in
 {
