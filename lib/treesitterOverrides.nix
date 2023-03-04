@@ -36,7 +36,7 @@ let
 						(pkgs.lib.replaceStrings [ "-" ] [ "_" ])
 					];
 				in
-					runCommand "nvim-treesitter-${name}-grammar" { } ''
+					pkgs.runCommand "nvim-treesitter-${name}-grammar" { } ''
 	  					mkdir -p $out/parser
 	    					ln -s ${grammar}/parser $out/parser/${name}.so
 					''
