@@ -52,7 +52,6 @@
 		# 		(f (free-sitter.builtGrammars // builtGrammars));
 		postPatch = if (name == "nvim-treesitter") then ''
 			rm -r parser
-			ln -s ${treesitterGrammars}/parser parser
 		''
 		else "";
 	};
