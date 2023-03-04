@@ -40,10 +40,8 @@
 		# else "";
 	};
 
-	overrides = final: prev: {
-		nvim-treesitter = prev.nvim-treesitter.overrideAttrs (old:
-			pkgs.callPackage ./treesitterOverrides.nix {} final prev
-		);
+	overrides = pkgs.callPackage ./override.nix {
+		inherit (pkgs.vimUtils.buildVimPluginFrom2Nix);
 	};
 
 	neovimPluginsBase = builtins.listToAttrs (map (name: { inherit name; value = buildPlug name; }) plugins);
