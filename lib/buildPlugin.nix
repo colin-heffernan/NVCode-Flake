@@ -41,7 +41,7 @@
 	};
 
 	overrides = pkgs.callPackage ./override.nix {
-		inherit (pkgs.vimUtils.buildVimPluginFrom2Nix);
+		inherit (pkgs inputs grammars);
 	};
 
 	neovimPluginsBase = self: builtins.listToAttrs (map (name: { inherit name; value = buildPlug name; }) plugins);

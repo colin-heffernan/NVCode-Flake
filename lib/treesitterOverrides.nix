@@ -7,7 +7,7 @@ let
 			src = builtins.getAttr ("tree-sitter-" ++ lang) inputs;
 		};
 	in
-		builtins.listToAttrs (map (name: { inherit name; value = buildGrammar name; }) grammars);
+		builtins.listToAttrs (map (lang: { inherit lang; value = buildGrammar lang; }) grammars);
 
 	generatedDerivations = pkgs.lib.filterAttrs (_: pkgs.lib.isDerivation) generatedGrammars;
 
