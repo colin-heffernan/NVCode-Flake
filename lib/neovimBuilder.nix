@@ -6,7 +6,7 @@
 		lua = pkgs.lua5_1;
 	};
 	wrapNvcode = neovim-unwrapped: lib.makeOverridable (nvcodeUtils.legacyWrapper neovim-unwrapped);
-	startPlugins = with pkgs.neovimPlugins; [
+	startPlugins = with pkgs.vimPlugins; [
 		plenary-nvim
 		nui-nvim
 		popup-nvim
@@ -26,6 +26,9 @@
 			c
 			cpp
 			css
+			dockerfile
+			gdscript
+			graphql
 			haskell
 			html
 			javascript
@@ -33,13 +36,14 @@
 			latex
 			lua
 			markdown
-			markdown-inline
 			nix
 			norg
 			python
 			regex
 			rust
+			scss
 			svelte
+			toml
 			typescript
 			vim
 		]))
