@@ -28,11 +28,11 @@
 		pname = name;
 		version = "master";
 		src = builtins.getAttr name inputs;
-		postPatch = if (name == "nvim-treesitter") then ''
-			rm -r parser
-			ln -s ${treesitterGrammars} parser
-		''
-		else "";
+		# postPatch = if (name == "nvim-treesitter") then ''
+		# 	rm -r parser
+		# 	ln -s ${treesitterGrammars} parser
+		# ''
+		# else "";
 	};
 in {
 	neovimPlugins = builtins.listToAttrs (map (name: { inherit name; value = buildPlug name; }) plugins);
