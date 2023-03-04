@@ -304,7 +304,7 @@
 				"leap-nvim"
 			];
 			grammars = [
-				"bash"
+				"tree-sitter-bash"
 			];
 			pluginOverlay = lib.buildPluginOverlay;
 			pkgs = import nixpkgs {

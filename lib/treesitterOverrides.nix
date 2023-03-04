@@ -3,9 +3,9 @@ let
 	generatedGrammars = let
 		inherit grammars;
 		buildGrammar = lang: pkgs.tree-sitter.buildGrammar {
-			language = lang;
+			language = pkgs.lib.removePrefix "tree-sitter-" lang;
 			version = "master";
-			src = builtins.getAttr ("tree-sitter-" ++ lang) inputs;
+			src = builtins.getAttr lang inputs;
 		};
 	in
 		builtins.listToAttrs (map (name: { inherit name; value = buildGrammar name; }) grammars);
