@@ -42,7 +42,7 @@
 
 	overrides = pkgs.callPackage ./override.nix {
 		inherit (pkgs inputs grammars);
-	};
+	} grammars;
 
 	neovimPluginsBase = self: builtins.listToAttrs (map (name: { inherit name; value = buildPlug name; }) plugins);
 in {
