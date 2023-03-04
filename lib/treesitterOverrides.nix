@@ -22,6 +22,8 @@ let
 		"tree-sitter-${replaced}" = v;
 	}) generatedDerivations;
 
+	allGrammars = pkgs.lib.attrValues generatedDerivations;
+
 	withPlugins =
 		f: final.nvim-treesitter.overrideAttrs (_: {
 			passthru.dependencies = map
@@ -44,9 +46,11 @@ let
 				)
 				(f (pkgs.tree-sitter.builtGrammars // builtGrammars));
 		});
+
+	withAllGrammars = withPlugins (_: allGrammars);
 in
 {
 	postPatch = ''
-		# rm -r parser
+		rm -r parser
 	'';
 }

@@ -20,7 +20,7 @@
 		neo-tree-nvim
 		telescope-nvim
 		project-nvim
-		nvim-treesitter						# For building plugins from source
+		# nvim-treesitter						# For building plugins from source
 		# (nvim-treesitter.withPlugins (plugins: with plugins; [		# For using Nixpkgs plugins
 		# 	bash
 		# 	c
@@ -49,6 +49,7 @@
 		# 	vim
 		# 	# yuck
 		# ]))
+		nvim-treesitter.withAllGrammars
 		nvim-treesitter-textobjects
 		nvim-ts-autotag
 		nvim-ts-context-commentstring
