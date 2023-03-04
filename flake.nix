@@ -312,7 +312,7 @@
 							old.patches;
 						});
 						vimPlugins = prev.vimPlugins.override {
-							nvim-treesitter.src = inputs.nvim-treesitter;
+							plugins.nvim-treesitter.src = inputs.nvim-treesitter;
 						};
 					})
 				];
