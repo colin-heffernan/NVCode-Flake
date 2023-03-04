@@ -1,6 +1,7 @@
-{ pkgs, inputs, grammars }: final: prev:
+{ pkgs, inputs, grammars, ... }: final: prev:
 let
 	generatedGrammars = let
+		inherit grammars;
 		buildGrammar = lang: pkgs.tree-sitter.buildGrammar {
 			language = lang;
 			version = "master";
