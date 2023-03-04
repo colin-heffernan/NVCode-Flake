@@ -47,6 +47,6 @@ let
 in
 {
 	postPatch = ''
-		rm -r parser
+		# rm -r parser
 	'';
 }
