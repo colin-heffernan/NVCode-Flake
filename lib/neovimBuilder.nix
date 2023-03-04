@@ -6,7 +6,7 @@
 		lua = pkgs.lua5_1;
 	};
 	wrapNvcode = neovim-unwrapped: lib.makeOverridable (nvcodeUtils.legacyWrapper neovim-unwrapped);
-	startPlugins = with pkgs.vimPlugins; [
+	startPlugins = with pkgs.neovimPlugins; [
 		plenary-nvim
 		nui-nvim
 		popup-nvim
@@ -20,33 +20,35 @@
 		neo-tree-nvim
 		telescope-nvim
 		project-nvim
-		# nvim-treesitter						# For building plugins from source
-		(nvim-treesitter.withPlugins (plugins: with plugins; [		# For using Nixpkgs plugins
-			bash
-			c
-			cpp
-			css
-			dockerfile
-			gdscript
-			graphql
-			haskell
-			html
-			javascript
-			json
-			latex
-			lua
-			markdown
-			nix
-			norg
-			python
-			regex
-			rust
-			scss
-			svelte
-			toml
-			typescript
-			vim
-		]))
+		nvim-treesitter						# For building plugins from source
+		# (nvim-treesitter.withPlugins (plugins: with plugins; [		# For using Nixpkgs plugins
+		# 	bash
+		# 	c
+		# 	cpp
+		# 	css
+		# 	dockerfile
+		# 	gdscript
+		# 	# gitignore
+		# 	graphql
+		# 	haskell
+		# 	html
+		# 	javascript
+		# 	json
+		# 	latex
+		# 	lua
+		# 	markdown
+		# 	nix
+		# 	norg
+		# 	python
+		# 	regex
+		# 	rust
+		# 	scss
+		# 	svelte
+		# 	toml
+		# 	typescript
+		# 	vim
+		# 	# yuck
+		# ]))
 		nvim-treesitter-textobjects
 		nvim-ts-autotag
 		nvim-ts-context-commentstring

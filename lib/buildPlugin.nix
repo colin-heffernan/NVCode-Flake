@@ -8,6 +8,7 @@
 		tree-sitter-css
 		tree-sitter-dockerfile
 		tree-sitter-gdscript
+		# tree-sitter-gitignore
 		tree-sitter-graphql
 		tree-sitter-haskell
 		tree-sitter-html
@@ -26,6 +27,7 @@
 		tree-sitter-toml
 		tree-sitter-typescript
 		tree-sitter-vim
+		# tree-sitter-yuck
 	]);
 
 	buildPlug = name: buildVimPluginFrom2Nix {
