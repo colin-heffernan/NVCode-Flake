@@ -1,33 +1,33 @@
 { pkgs, inputs, plugins, ... }: final: prev: let
 	inherit (prev.vimUtils) buildVimPluginFrom2Nix;
 
-	treesitterGrammars = prev.tree-sitter.withPlugins (grammars: with grammars; [
-		tree-sitter-bash
-		tree-sitter-c
-		tree-sitter-cpp
-		tree-sitter-css
-		tree-sitter-dockerfile
-		tree-sitter-gdscript
-		# tree-sitter-gitignore
-		tree-sitter-graphql
-		tree-sitter-haskell
-		tree-sitter-html
-		tree-sitter-javascript
-		tree-sitter-json
-		tree-sitter-latex
-		tree-sitter-lua
-		tree-sitter-markdown
-		tree-sitter-nix
-		tree-sitter-norg
-		tree-sitter-python
-		tree-sitter-regex
-		tree-sitter-rust
-		tree-sitter-scss
-		tree-sitter-svelte
-		tree-sitter-toml
-		tree-sitter-typescript
-		tree-sitter-vim
-		# tree-sitter-yuck
+	treesitterGrammars = prev.vimPlugins.nvim-treesitter.withPlugins (grammars: with grammars; [
+		bash
+		c
+		cpp
+		css
+		dockerfile
+		gdscript
+		# gitignore
+		graphql
+		haskell
+		html
+		javascript
+		json
+		latex
+		lua
+		markdown
+		nix
+		norg
+		python
+		regex
+		rust
+		scss
+		svelte
+		toml
+		typescript
+		vim
+		# yuck
 	]);
 
 	buildPlug = name: buildVimPluginFrom2Nix {
@@ -52,7 +52,7 @@
 		# 		(f (free-sitter.builtGrammars // builtGrammars));
 		postPatch = if (name == "nvim-treesitter") then ''
 			rm -r parser
-			ln -s ${treesitterGrammars} parser
+			ln -s ${treesitterGrammars/parser} parser
 		''
 		else "";
 	};
