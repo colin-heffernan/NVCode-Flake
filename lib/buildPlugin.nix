@@ -46,5 +46,6 @@
 		);
 	};
 in {
-	neovimPlugins = pkgs.lib.makeExtensible (pkgs.lib.extends overrides (builtins.listToAttrs (map (name: { inherit name; value = buildPlug name; }) plugins)));
+	neovimPluginsBase = builtins.listToAttrs (map (name: { inherit name; value = buildPlug name; }) plugins);
+	neovimPlugins = pkgs.lib.makeExtensible (pkgs.lib.extends overrides neovimPluginsBase);
 }
