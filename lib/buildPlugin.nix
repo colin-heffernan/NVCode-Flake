@@ -1,5 +1,5 @@
-{ pkgs, inputs, plugins, ... }: final: prev: let
-	inherit (prev.neovimUtils) buildNeovimPluginFrom2Nix;
+{ pkgs, inputs, plugins, grammars, ... }: final: prev: let
+	inherit (prev.vimUtils) buildVimPluginFrom2Nix;
 
 	# treesitterGrammars = prev.vimPlugins.nvim-treesitter.withPlugins (grammars: with grammars; [
 	# 	bash
@@ -30,7 +30,7 @@
 	# 	# yuck
 	# ]);
 
-	buildPlug = name: buildNeovimPluginFrom2Nix {
+	buildPlug = name: buildVimPluginFrom2Nix {
 		pname = name;
 		version = "master";
 		src = builtins.getAttr name inputs;
@@ -39,6 +39,12 @@
 		# ''
 		# else "";
 	};
+
+	overrides = {
+		nvim-treesitter = prev.nvim-treesitter.overrideAttrs (old:
+			callPackage ./treesitterOverrides.nix {} final prev
+		);
+	};
 in {
-	neovimPlugins = builtins.listToAttrs (map (name: { inherit name; value = buildPlug name; }) plugins);
+	neovimPlugins = builtins.listToAttrs (map pkgs.lib.makeExtensible (extends overrides (name: { inherit name; value = buildPlug name; })) plugins);
 }

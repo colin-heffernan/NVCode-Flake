@@ -246,7 +246,10 @@
 		# All following Nixpkgs for now
 
 		##### Treesitter Lanugages
-		# All following Nixpkgs for now
+		tree-sitter-bash = {
+			url = "github:tree-sitter/tree-sitter-bash";
+			flake = false;
+		};
 	};
 
 	outputs = { self, nixpkgs, neovim-nightly, ... } @ inputs:
@@ -300,6 +303,9 @@
 				"ccc-nvim"
 				"leap-nvim"
 			];
+			grammars = [
+				"bash"
+			];
 			pluginOverlay = lib.buildPluginOverlay;
 			pkgs = import nixpkgs {
 				inherit system neovim-nightly;
@@ -317,7 +323,7 @@
 					})
 				];
 			};
-			lib = import ./lib { inherit pkgs inputs plugins; };
+			lib = import ./lib { inherit pkgs inputs plugins grammars; };
 			inherit (lib) neovimBuilder;
 		in rec {
 			apps.${system} = rec {
