@@ -1,4 +1,4 @@
-{ pkgs, grammars }: self: super:
+{ pkgs, inputs, grammars }: self: super:
 let
 	generatedGrammars = let
 		buildGrammar = lang: pkgs.tree-sitter.buildGrammar {
