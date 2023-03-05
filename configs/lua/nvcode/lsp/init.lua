@@ -15,4 +15,4 @@ end
 
 require("nvcode.lsp.configs")
 require("nvcode.lsp.handlers").setup()
-require("nvcode.lsp.nullls")
+-- require("nvcode.lsp.nullls")
