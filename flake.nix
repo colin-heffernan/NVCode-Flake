@@ -463,7 +463,12 @@
 			
 			devShells.${system} = {
 				default = pkgs.mkShell {
-					buildInputs = [neovimBuilder];
+					buildInputs = with pkgs; [
+						lua-language-server
+						rnix-lsp
+					] ++ [
+						neovimBuilder
+					];
 				};
 			};
 
