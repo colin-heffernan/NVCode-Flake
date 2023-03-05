@@ -152,10 +152,10 @@
 			url = "github:hrsh7th/cmp-nvim-lsp";
 			flake = false;
 		};
-		# cmp-buffer = {
-		# 	url = "github:hrsh7th/cmp-buffer";
-		# 	flake = false;
-		# };
+		cmp-buffer = {
+			url = "github:hrsh7th/cmp-buffer";
+			flake = false;
+		};
 		cmp-cmdline = {
 			url = "github:hrsh7th/cmp-cmdline";
 			flake = false;
@@ -386,7 +386,7 @@
 				"cmp-path"
 				# "cmp-calc"
 				"cmp-nvim-lsp"
-				# "cmp-buffer"
+				"cmp-buffer"
 				"cmp-cmdline"
 				"cmp_luasnip"
 				"luasnip"
