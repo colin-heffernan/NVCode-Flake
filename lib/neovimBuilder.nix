@@ -15,11 +15,12 @@
 		nvim-web-devicons
 		tokyonight-nvim
 		lualine-nvim
-		nvim-cokeline
+		bufferline-nvim
+		# nvim-cokeline
 		alpha-nvim
 		neo-tree-nvim
 		telescope-nvim
-		project-nvim
+		# project-nvim
 		# nvim-treesitter						# For building plugins from source
 		# (nvim-treesitter.withPlugins (plugins: with plugins; [		# For using Nixpkgs plugins
 		# 	bash
@@ -50,7 +51,7 @@
 		# 	# yuck
 		# ]))
 		nvim-treesitter.withAllGrammars
-		nvim-treesitter-textobjects
+		# nvim-treesitter-textobjects
 		nvim-ts-autotag
 		nvim-ts-context-commentstring
 		ccc-nvim
@@ -65,22 +66,22 @@
 		nvim-lspconfig
 		null-ls-nvim
 		SchemaStore-nvim
-		nvim-dap
-		nvim-dap-ui
+		# nvim-dap
+		# nvim-dap-ui
 		indent-blankline-nvim
 		gitsigns-nvim
 		neorg
 		comment-nvim
-		twilight-nvim
-		zen-mode-nvim
+		# twilight-nvim
+		# zen-mode-nvim
 		leap-nvim
 		nvim-autopairs
-		trouble-nvim
-		lspsaga-nvim
+		# trouble-nvim
+		# lspsaga-nvim
 		todo-comments-nvim
 		friendly-snippets
-		cmp-calc
-		cmp-nvim-lsp
+		# cmp-calc
+		# cmp-nvim-lsp
 		luasnip
 		cmp_luasnip
 	];

@@ -9,10 +9,11 @@ require("nvcode.colorscheme")
 require("nvcode.treesitter")
 require("nvcode.ccc")
 require("nvcode.lualine")
-require("nvcode.cokeline")
+require("nvcode.bufferline")
+--[[ require("nvcode.cokeline") ]]
 require("nvcode.neotree")
 require("nvcode.telescope")
-require("nvcode.project")
+--[[ require("nvcode.project") ]]
 --[[ require("nvcode.octo") ]]
 require("nvcode.toggleterm")
 require("nvcode.cmp.auto")

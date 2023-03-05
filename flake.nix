@@ -58,10 +58,14 @@
 			url = "github:nvim-lualine/lualine.nvim";
 			flake = false;
 		};
-		nvim-cokeline = {
-			url = "github:noib3/nvim-cokeline";
+		bufferline-nvim = {
+			url = "github:akinsho/bufferline.nvim";
 			flake = false;
 		};
+		# nvim-cokeline = {
+		# 	url = "github:noib3/nvim-cokeline";
+		# 	flake = false;
+		# };
 		alpha-nvim = {
 			url = "github:goolord/alpha-nvim";
 			flake = false;
@@ -80,10 +84,10 @@
 			url = "github:nvim-telescope/telescope.nvim";
 			flake = false;
 		};
-		project-nvim = {
-			url = "github:ahmedkhalf/project.nvim";
-			flake = false;
-		};
+		# project-nvim = {
+		# 	url = "github:ahmedkhalf/project.nvim";
+		# 	flake = false;
+		# };
 
 		# Terminal
 		toggleterm-nvim = {
@@ -108,28 +112,28 @@
 			url = "github:nvim-treesitter/nvim-treesitter";
 			flake = false;
 		};
-		nvim-treesitter-textobjects = {
-			url = "github:nvim-treesitter/nvim-treesitter-textobjects";
-			flake = false;
-		};
-		trouble-nvim = {
-			url = "github:folke/trouble.nvim";
-			flake = false;
-		};
-		lspsaga-nvim = {
-			url = "github:glepnir/lspsaga.nvim";
-			flake = false;
-		};
+		# nvim-treesitter-textobjects = {
+		# 	url = "github:nvim-treesitter/nvim-treesitter-textobjects";
+		# 	flake = false;
+		# };
+		# trouble-nvim = {
+		# 	url = "github:folke/trouble.nvim";
+		# 	flake = false;
+		# };
+		# lspsaga-nvim = {
+		# 	url = "github:glepnir/lspsaga.nvim";
+		# 	flake = false;
+		# };
 
 		# Debugging
-		nvim-dap = {
-			url = "github:mfussenegger/nvim-dap";
-			flake = false;
-		};
-		nvim-dap-ui = {
-			url = "github:rcarriga/nvim-dap-ui";
-			flake = false;
-		};
+		# nvim-dap = {
+		# 	url = "github:mfussenegger/nvim-dap";
+		# 	flake = false;
+		# };
+		# nvim-dap-ui = {
+		# 	url = "github:rcarriga/nvim-dap-ui";
+		# 	flake = false;
+		# };
 
 		# Completion
 		nvim-cmp = {
@@ -140,18 +144,18 @@
 			url = "github:hrsh7th/cmp-path";
 			flake = false;
 		};
-		cmp-calc = {
-			url = "github:hrsh7th/cmp-calc";
-			flake = false;
-		};
-		cmp-nvim-lsp = {
-			url = "github:hrsh7th/cmp-nvim-lsp";
-			flake = false;
-		};
-		cmp-buffer = {
-			url = "github:hrsh7th/cmp-buffer";
-			flake = false;
-		};
+		# cmp-calc = {
+		# 	url = "github:hrsh7th/cmp-calc";
+		# 	flake = false;
+		# };
+		# cmp-nvim-lsp = {
+		# 	url = "github:hrsh7th/cmp-nvim-lsp";
+		# 	flake = false;
+		# };
+		# cmp-buffer = {
+		# 	url = "github:hrsh7th/cmp-buffer";
+		# 	flake = false;
+		# };
 		cmp-cmdline = {
 			url = "github:hrsh7th/cmp-cmdline";
 			flake = false;
@@ -186,10 +190,10 @@
 			url = "github:lewis6991/gitsigns.nvim";
 			flake = false;
 		};
-		octo-nvim = {
-			url = "github:pwntester/octo.nvim";
-			flake = false;
-		};
+		# octo-nvim = {
+		# 	url = "github:pwntester/octo.nvim";
+		# 	flake = false;
+		# };
 
 		# Indent lines
 		indent-blankline-nvim = {
@@ -218,14 +222,14 @@
 		};
 
 		# Zen Mode
-		zen-mode-nvim = {
-			url = "github:folke/zen-mode.nvim";
-			flake = false;
-		};
-		twilight-nvim = {
-			url = "github:folke/twilight.nvim";
-			flake = false;
-		};
+		# zen-mode-nvim = {
+		# 	url = "github:folke/zen-mode.nvim";
+		# 	flake = false;
+		# };
+		# twilight-nvim = {
+		# 	url = "github:folke/twilight.nvim";
+		# 	flake = false;
+		# };
 
 		# Colors
 		ccc-nvim = {
@@ -365,27 +369,28 @@
 				"nvim-web-devicons"
 				"tokyonight-nvim"
 				"lualine-nvim"
-				"nvim-cokeline"
+				"bufferline-nvim"
+				# "nvim-cokeline"
 				"alpha-nvim"
 				"noice-nvim"
 				"neo-tree-nvim"
 				"telescope-nvim"
-				"project-nvim"
+				# "project-nvim"
 				"toggleterm-nvim"
 				"nvim-lspconfig"
 				"null-ls-nvim"
 				"schemastore-nvim"
 				"nvim-treesitter"
-				"nvim-treesitter-textobjects"
-				"trouble-nvim"
-				"lspsaga-nvim"
-				"nvim-dap"
-				"nvim-dap-ui"
+				# "nvim-treesitter-textobjects"
+				# "trouble-nvim"
+				# "lspsaga-nvim"
+				# "nvim-dap"
+				# "nvim-dap-ui"
 				"nvim-cmp"
 				"cmp-path"
-				"cmp-calc"
-				"cmp-nvim-lsp"
-				"cmp-buffer"
+				# "cmp-calc"
+				# "cmp-nvim-lsp"
+				# "cmp-buffer"
 				"cmp-cmdline"
 				"cmp_luasnip"
 				"luasnip"
@@ -393,14 +398,14 @@
 				"nvim-autopairs"
 				"nvim-ts-autotag"
 				"gitsigns-nvim"
-				"octo-nvim"
+				# "octo-nvim"
 				"indent-blankline-nvim"
 				"neorg"
 				"comment-nvim"
 				"nvim-ts-context-commentstring"
 				"todo-comments-nvim"
-				"zen-mode-nvim"
-				"twilight-nvim"
+				# "zen-mode-nvim"
+				# "twilight-nvim"
 				"ccc-nvim"
 				"leap-nvim"
 			];
