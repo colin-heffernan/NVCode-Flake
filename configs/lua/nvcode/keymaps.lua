@@ -26,7 +26,7 @@ keymap("n", "<Space>e", ":Neotree toggle<CR>", opts)
 
 
 -- Toggle Terminals
-keymap("n", "<Space>t", ":ToggleTerm direction=float<CR>", opts)
+keymap("n", "<C-Esc>", ":ToggleTerm direction=float<CR>", opts)
 keymap("t", "<C-Esc>", "<C-\\><C-n>:ToggleTerm<CR>", opts)
 
 -- Toggle Trouble
