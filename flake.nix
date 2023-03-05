@@ -306,6 +306,7 @@
 			url = "github:Mdeiml/tree-sitter-markdown";
 			flake = false;
 		};
+		tree-sitter-markdown-inline.follows = "tree-sitter-markdown";
 		tree-sitter-nix = {
 			url = "github:cstrahan/tree-sitter-nix";
 			flake = false;

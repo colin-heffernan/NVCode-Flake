@@ -5,7 +5,7 @@ let
 		buildGrammar = lang: pkgs.tree-sitter.buildGrammar {
 			language = pkgs.lib.removePrefix "tree-sitter-" lang;
 			version = "master";
-			src = if (lang == "tree-sitter-markdown-inline") then (builtins.getAttr (pkgs.lib.removeSuffix "-inline" lang) inputs) else (builtins.getAttr lang inputs);
+			src = builtins.getAttr lang inputs;
 			location = if (lang == "tree-sitter-markdown") then "tree-sitter-markdown" else if (lang == "tree-sitter-markdown-inline") then "tree-sitter-markdown-inline" else "";
 		};
 	in
