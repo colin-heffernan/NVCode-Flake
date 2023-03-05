@@ -7,9 +7,18 @@ end
 
 bufferline.setup {
 	options = {
-		--[[ buffer_close_icon = "",
-		close_icon = "",
-		numbers = "buffer_id", ]]
-		offsets = { { filetype = "NvimTree", text = "", padding = 1 } },
+		numbers = "none",
+		indicator = {
+			style = "none"
+		},
+		diagnostics_indicator = function(count, level, diagnostics_dict, context)
+			local icon = level:match("error") and " " or " "
+			return " " .. icon .. count
+		end,
+		offsets = { { filetype = "neo-tree", text = "", padding = 1 } },
+		show_buffer_close_icons = false,
+		show_close_icon = false,
+		separator_style = "thick",
+		always_show_bufferline = true,
 	},
 }

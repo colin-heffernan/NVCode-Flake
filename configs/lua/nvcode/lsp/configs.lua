@@ -6,18 +6,21 @@ end
 
 local servers = {
 	"bashls",
-	"clangd",
 	"cssls",
+	"dockerls",
+	"graphql",
 	"hls",
 	"html",
 	"jsonls",
+	"lua_ls",
+	"marksman",
 	"pyright",
 	"rnix",
 	"rust_analyzer",
-	"sumneko_lua",
 	"svelte",
 	"texlab",
-	"tsserver"
+	"tsserver",
+	"vimls"
 }
 
 for _, server in pairs(servers) do

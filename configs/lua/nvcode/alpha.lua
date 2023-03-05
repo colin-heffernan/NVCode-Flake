@@ -48,7 +48,7 @@ dashboard.section.footer.val = {
 dashboard.section.buttons.val = {
 	dashboard.button("f", "  Find file", ":Telescope find_files hidden=true<CR>"),
 	dashboard.button("o", "  Recently opened files", ":Telescope oldfiles<CR>"),
-	dashboard.button("p", "  Recently opened projects", ":Telescope projects<CR>"),
+	-- dashboard.button("p", "  Recently opened projects", ":Telescope projects<CR>"),
 	dashboard.button("n", "  New file", ":e scratch.txt<CR>"),
 	-- dashboard.button("u", "  Update plugins", ":PackerSync<CR>"),
 	dashboard.button("q", "  Quit NVCode", ":qa!<CR>"),

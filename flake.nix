@@ -148,10 +148,10 @@
 		# 	url = "github:hrsh7th/cmp-calc";
 		# 	flake = false;
 		# };
-		# cmp-nvim-lsp = {
-		# 	url = "github:hrsh7th/cmp-nvim-lsp";
-		# 	flake = false;
-		# };
+		cmp-nvim-lsp = {
+			url = "github:hrsh7th/cmp-nvim-lsp";
+			flake = false;
+		};
 		# cmp-buffer = {
 		# 	url = "github:hrsh7th/cmp-buffer";
 		# 	flake = false;
@@ -270,10 +270,6 @@
 			url = "github:camdencheek/tree-sitter-dockerfile";
 			flake = false;
 		};
-		tree-sitter-gdscript = {
-			url = "github:PrestonKnopp/tree-sitter-gdscript";
-			flake = false;
-		};
 		tree-sitter-gitignore = {
 			url = "github:shunsambongi/tree-sitter-gitignore";
 			flake = false;
@@ -389,7 +385,7 @@
 				"nvim-cmp"
 				"cmp-path"
 				# "cmp-calc"
-				# "cmp-nvim-lsp"
+				"cmp-nvim-lsp"
 				# "cmp-buffer"
 				"cmp-cmdline"
 				"cmp_luasnip"
@@ -415,7 +411,6 @@
 				"tree-sitter-cpp"
 				"tree-sitter-css"
 				"tree-sitter-dockerfile"
-				"tree-sitter-gdscript"
 				"tree-sitter-gitignore"
 				"tree-sitter-graphql"
 				"tree-sitter-haskell"
