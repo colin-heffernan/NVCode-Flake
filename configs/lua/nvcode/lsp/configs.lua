@@ -8,6 +8,7 @@ local servers = {
 	"bashls",
 	"cssls",
 	"dockerls",
+	"eslint",
 	"graphql",
 	"hls",
 	"html",
