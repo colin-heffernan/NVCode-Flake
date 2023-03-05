@@ -6,14 +6,6 @@ end
 local colors_status_ok, tncolors = pcall(require, "tokyonight.colors")
 if colors_status_ok then
 	local colors = tncolors.setup({ transform = true })
-	local empty = require("lualine.component"):extend()
-	function empty:draw(default_highlight)
-		self.status = ''
-		self.applied_separator = ''
-		self:apply_highlights(default_highlight)
-		self:apply_section_separators()
-		return self.status
-	end
 	local function process_sections(sections)
 		for name, section in pairs(sections) do
 			local left = name:sub(9, 10) < 'x'
