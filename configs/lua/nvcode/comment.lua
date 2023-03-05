@@ -28,8 +28,8 @@ comment.setup {
 		}
 	end,
 	toggler = {
-		line = "<Space>cc",
-		block = "<Space>bc",
+		line = "<Space>c",
+		block = "<Space>b",
 	},
 	opleader = {
 		line = "<Space>c",
