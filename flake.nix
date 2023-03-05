@@ -38,10 +38,10 @@
 		};
 
 		# Keymaps
-		hydra-nvim = {
-			url = "github:anuvyklack/hydra.nvim";
-			flake = false;
-		};
+		# hydra-nvim = {
+		# 	url = "github:anuvyklack/hydra.nvim";
+		# 	flake = false;
+		# };
 
 		# Icons
 		nvim-web-devicons = {
@@ -361,7 +361,7 @@
 				"nui-nvim"
 				"popup-nvim"
 				"nvim-notify"
-				"hydra-nvim"
+				# "hydra-nvim"
 				"nvim-web-devicons"
 				"tokyonight-nvim"
 				"lualine-nvim"

@@ -207,22 +207,6 @@
         "type": "github"
       }
     },
-    "hydra-nvim": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1675678260,
-        "narHash": "sha256-MBlC7qQMVNNfOFcvTnw1DREOS9QWoI4zsyu3QYqIkLc=",
-        "owner": "anuvyklack",
-        "repo": "hydra.nvim",
-        "rev": "3ced42c0b6a6c85583ff0f221635a7f4c1ab0dd0",
-        "type": "github"
-      },
-      "original": {
-        "owner": "anuvyklack",
-        "repo": "hydra.nvim",
-        "type": "github"
-      }
-    },
     "indent-blankline-nvim": {
       "flake": false,
       "locked": {
@@ -581,7 +565,6 @@
         "comment-nvim": "comment-nvim",
         "friendly-snippets": "friendly-snippets",
         "gitsigns-nvim": "gitsigns-nvim",
-        "hydra-nvim": "hydra-nvim",
         "indent-blankline-nvim": "indent-blankline-nvim",
         "leap-nvim": "leap-nvim",
         "lualine-nvim": "lualine-nvim",

@@ -11,7 +11,7 @@
 		nui-nvim
 		popup-nvim
 		nvim-notify
-		hydra-nvim
+		# hydra-nvim
 		nvim-web-devicons
 		tokyonight-nvim
 		lualine-nvim
