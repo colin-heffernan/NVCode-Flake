@@ -1,8 +1,8 @@
 vim.api.nvim_exec(
 	[[
 		packadd friendly-snippets
-		packadd cmp-calc
-		runtime after/plugin/cmp_calc.lua
+		" packadd cmp-calc
+		" runtime after/plugin/cmp_calc.lua
 		packadd cmp-nvim-lsp
 		runtime after/plugin/cmp_nvim_lsp.lua
 		packadd luasnip
