@@ -429,7 +429,7 @@
 				"tree-sitter-scss"
 				"tree-sitter-svelte"
 				"tree-sitter-toml"
-				"tree-sitter-typescript"
+				# "tree-sitter-typescript"
 				"tree-sitter-vim"
 				"tree-sitter-yuck"
 			];
