@@ -58,7 +58,7 @@
 		toggleterm-nvim
 		nvim-cmp
 		cmp-path
-		# cmp-buffer
+		cmp-buffer
 		cmp-cmdline
 		noice-nvim
 	];
@@ -81,7 +81,7 @@
 		todo-comments-nvim
 		friendly-snippets
 		# cmp-calc
-		# cmp-nvim-lsp
+		cmp-nvim-lsp
 		luasnip
 		cmp_luasnip
 	];
