@@ -741,6 +741,9 @@
         "tree-sitter-latex": "tree-sitter-latex",
         "tree-sitter-lua": "tree-sitter-lua",
         "tree-sitter-markdown": "tree-sitter-markdown",
+        "tree-sitter-markdown-inline": [
+          "tree-sitter-markdown"
+        ],
         "tree-sitter-nix": "tree-sitter-nix",
         "tree-sitter-norg": "tree-sitter-norg",
         "tree-sitter-python": "tree-sitter-python",
