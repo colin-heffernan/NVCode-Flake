@@ -7,9 +7,9 @@ end
 
 bufferline.setup {
 	options = {
-		buffer_close_icon = "",
+		--[[ buffer_close_icon = "",
 		close_icon = "",
-		numbers = "buffer_id",
+		numbers = "buffer_id", ]]
 		offsets = { { filetype = "NvimTree", text = "", padding = 1 } },
 	},
 }

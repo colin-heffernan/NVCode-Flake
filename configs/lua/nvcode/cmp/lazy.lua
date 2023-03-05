@@ -88,23 +88,23 @@ cmp.setup {
 		format = function(entry, vim_item)
 			vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
 			vim_item.menu = ({
-				nvim_lsp = "[LSP]",
+				--[[ nvim_lsp = "[LSP]", ]]
 				neorg = "[Neorg]",
 				luasnip = "[Snippet]",
-				buffer = "[Buffer]",
+				--[[ buffer = "[Buffer]", ]]
 				path = "[Path]",
-				calc = "[Calc]",
+				--[[ calc = "[Calc]", ]]
 			})[entry.source.name]
 			return vim_item
 		end,
 	},
 	sources = {
-		{ name = "nvim_lsp" },
+		--[[ { name = "nvim_lsp" }, ]]
 		{ name = "neorg" },
 		{ name = "luasnip" },
-		{ name = "buffer" },
+		--[[ { name = "buffer" }, ]]
 		{ name = "path" },
-		{ name = "calc" },
+		--[[ { name = "calc" }, ]]
 	},
 	confirm_opts = {
 		behavior = cmp.ConfirmBehavior.Replace,
