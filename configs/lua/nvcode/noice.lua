@@ -5,6 +5,18 @@ if not status_ok then
 end
 
 noice.setup {
+	views = {
+		cmdline_popup = {
+			border = {
+				style = "none",
+				padding = { 1, 2 }
+			},
+			filter_options = {},
+			win_options = {
+				winhighlight = "NormalFloat:NormalFloat,FloatBorder:FloatBorder"
+			}
+		}
+	},
 	lsp = {
 		signature = {
 			enabled = false
