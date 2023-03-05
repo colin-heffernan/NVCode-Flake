@@ -58,7 +58,7 @@
 		toggleterm-nvim
 		nvim-cmp
 		cmp-path
-		cmp-buffer
+		# cmp-buffer
 		cmp-cmdline
 		noice-nvim
 	];
