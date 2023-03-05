@@ -6,7 +6,7 @@ let
 			language = pkgs.lib.removePrefix "tree-sitter-" lang;
 			version = "master";
 			src = builtins.getAttr lang inputs;
-			location = if (language == "tree-sitter-markdown") then "tree-sitter-markdown" else if (language == "tree-sitter-markdown-inline") then "tree-sitter-markdown-inline" else if (language == "tree-sitter-typescript") then "typescript" else "";
+			location = if (lang == "tree-sitter-markdown") then "tree-sitter-markdown" else if (lang == "tree-sitter-markdown-inline") then "tree-sitter-markdown-inline" else if (lang == "tree-sitter-typescript") then "typescript" else null;
 		};
 	in
 		builtins.listToAttrs (map (name: { inherit name; value = buildGrammar name; }) grammars);
