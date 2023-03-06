@@ -62,7 +62,7 @@
 		cmp-cmdline
 		noice-nvim
 	];
-	optPlugins = with pkgs.vimPlugins; [
+	optPlugins = with pkgs.neovimPlugins; [
 		nvim-lspconfig
 		null-ls-nvim
 		SchemaStore-nvim
@@ -75,6 +75,7 @@
 		# twilight-nvim
 		# zen-mode-nvim
 		leap-nvim
+		leap-spooky-nvim
 		nvim-autopairs
 		# trouble-nvim
 		# lspsaga-nvim

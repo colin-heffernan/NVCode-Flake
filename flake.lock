@@ -239,6 +239,22 @@
         "type": "github"
       }
     },
+    "leap-spooky-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1678038793,
+        "narHash": "sha256-2nJkkFYRxwIyc2S6heKHpbtqVlSYdqRyDBWL2mdqbks=",
+        "owner": "ggandor",
+        "repo": "leap-spooky.nvim",
+        "rev": "79a7a3f28897d99e5da970e7121ac8ff738e1554",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ggandor",
+        "repo": "leap-spooky.nvim",
+        "type": "github"
+      }
+    },
     "lualine-nvim": {
       "flake": false,
       "locked": {
@@ -567,6 +583,7 @@
         "gitsigns-nvim": "gitsigns-nvim",
         "indent-blankline-nvim": "indent-blankline-nvim",
         "leap-nvim": "leap-nvim",
+        "leap-spooky-nvim": "leap-spooky-nvim",
         "lualine-nvim": "lualine-nvim",
         "luasnip": "luasnip",
         "neo-tree-nvim": "neo-tree-nvim",

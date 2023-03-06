@@ -1,6 +1,6 @@
 vim.api.nvim_exec(
 	[[
-		packadd indent-blankline.nvim
+		packadd indent-blankline-nvim
 	]],
 	true
 )

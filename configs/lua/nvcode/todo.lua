@@ -1,6 +1,6 @@
 vim.api.nvim_exec(
 	[[
-		packadd todo-comments.nvim
+		packadd todo-comments-nvim
 	]],
 	true
 )

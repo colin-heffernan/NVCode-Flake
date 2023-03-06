@@ -1,6 +1,6 @@
 vim.api.nvim_exec(
 	[[
-		packadd comment.nvim
+		packadd comment-nvim
 	]],
 	true
 )
@@ -28,8 +28,8 @@ comment.setup {
 		}
 	end,
 	toggler = {
-		line = "<Space>c",
-		block = "<Space>b",
+		line = "<Space>cc",
+		block = "<Space>bb",
 	},
 	opleader = {
 		line = "<Space>c",

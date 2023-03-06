@@ -242,6 +242,10 @@
 			url = "github:ggandor/leap.nvim";
 			flake = false;
 		};
+		leap-spooky-nvim = {
+			url = "github:ggandor/leap-spooky.nvim";
+			flake = false;
+		};
 
 		##### Language Servers
 		# All following Nixpkgs for now
@@ -375,7 +379,7 @@
 				"toggleterm-nvim"
 				"nvim-lspconfig"
 				"null-ls-nvim"
-				"schemastore-nvim"
+				"SchemaStore-nvim"
 				"nvim-treesitter"
 				# "nvim-treesitter-textobjects"
 				# "trouble-nvim"
@@ -404,6 +408,7 @@
 				# "twilight-nvim"
 				"ccc-nvim"
 				"leap-nvim"
+				"leap-spooky-nvim"
 			];
 			grammars = [
 				"tree-sitter-bash"
