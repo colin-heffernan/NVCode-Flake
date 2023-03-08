@@ -29,9 +29,6 @@ keymap("n", "<Space>e", ":Neotree toggle<CR>", opts)
 keymap("n", "<C-Esc>", ":ToggleTerm direction=float<CR>", opts)
 keymap("t", "<C-Esc>", "<C-\\><C-n>:ToggleTerm<CR>", opts)
 
--- Toggle Trouble
---[[ keymap("n", "<Space>d", ":Trouble workspace_diagnostics<CR>", opts) ]]
-
 -- Search files
 keymap("n", "<Space>f", ":Telescope find_files hidden=true<CR>", opts)
 keymap("n", "<Space>o", ":Telescope oldfiles<CR>", opts)
