@@ -6,6 +6,7 @@ end
 
 local servers = {
 	"bashls",
+	"clangd",
 	"cssls",
 	"dockerls",
 	"eslint",
