@@ -306,6 +306,10 @@
 			url = "github:MunifTanjim/tree-sitter-lua";
 			flake = false;
 		};
+		tree-sitter-make = {
+			url = "github:alemuller/tree-sitter-make";
+			flake = false;
+		};
 		tree-sitter-markdown = {
 			url = "github:Mdeiml/tree-sitter-markdown";
 			flake = false;
@@ -424,6 +428,7 @@
 				"tree-sitter-json"
 				"tree-sitter-latex"
 				"tree-sitter-lua"
+				"tree-sitter-make"
 				"tree-sitter-markdown"
 				"tree-sitter-markdown-inline"
 				"tree-sitter-nix"
