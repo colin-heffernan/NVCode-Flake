@@ -13,57 +13,33 @@ end
 
 neorg.setup {
 	load = {
-		["core.autocommands"] = {},
-		["core.norg.esupports.metagen"] = {
+		["core.defaults"] = {},
+		["core.export"] = {},
+		["core.export.markdown"] = {},
+		["core.norg.completion"] = {
 			config = {
-				type = "auto"
+				engine = "nvim-cmp"
 			}
 		},
-		["core.keybinds"] = {},
-		["core.norg.qol.todo_items"] = {
+		["core.norg.concealer"] = {
 			config = {
-				order = {
-					{ "cancelled", "_" },
-					{ "undone", " " },
-					{ "pending", "-" },
-					{ "done", "x" },
-					{ "on_hold", "=" },
-					{ "important", "!" },
-				}
+				folds = false
 			}
 		},
-		["core.syntax"] = {},
-		["core.tangle"] = {},
-		["core.neorgcmd"] = {},
-		["core.mode"] = {},
-		["core.norg.esupports.indent"] = {},
+		["core.norg.dirman"] = {
+			config = {
+				workspaces = {
+					main = "~/Notes"
+				},
+				index = "index.norg"
+			}
+		},
+		["core.norg.manoeuvre"] = {},
 		["core.integrations.treesitter"] = {
 			config = {
 				configure_parsers = false,
 				install_parsers = false
 			}
 		},
-		["core.presenter"] = {
-			config = {
-				zen_mode = "zen-mode"
-			}
-		},
-		["core.norg.qol.toc"] = {},
-		["core.norg.concealer"] = {
-			config = {
-				folds = false
-			}
-		},
-		["core.norg.completion"] = {
-			config = {
-				engine = "nvim-cmp"
-			}
-		},
-		["core.export"] = {},
-		["core.export.markdown"] = {},
-		["core.ui"] = {},
-		["core.queries.native"] = {},
-		["core.integrations.nvim-cmp"] = {},
-		["core.highlights"] = {}
 	}
 }
