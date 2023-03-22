@@ -29,7 +29,7 @@ mkdnflow.setup {
 	perspective = {
 		priority = "root",
 		fallback = "current",
-		root_tell = "index.md",
+		root_tell = "README.md",
 		nvim_md_heel = false,
 		update = false
 	},
@@ -48,9 +48,9 @@ mkdnflow.setup {
 		transform_explicit = false,
 		transform_implicit = function(input)
 			if input:match("%d%d%d%d%-%d%d%-%d%d") then
-				return("journals/" .. input)
+				return("Journals/" .. input)
 			else
-				return("pages/" .. input)
+				return("Pages/" .. input)
 			end
 		end
 	},
