@@ -16,10 +16,11 @@ keymap("n", "<C-Right>", "<C-w>l", opts)
 -- Buffer navigation
 keymap("n", "<S-Left>", ":BufferLineCyclePrev<CR>", opts)
 keymap("n", "<S-Right>", ":BufferLineCycleNext<CR>", opts)
+keymap("n", "<Space>k", ":BufferLinePickClose<CR>", opts)
 
 -- Splits
---[[ keymap("n", "<Space>sv", "<C-w>v", opts)
-keymap("n", "<Space>sh", "<C-w>s", opts) ]]
+keymap("n", "<Space>v", "<C-w>v", opts)
+keymap("n", "<Space>h", "<C-w>s", opts)
 
 -- Toggle NeoTree
 keymap("n", "<Space>e", ":Neotree toggle<CR>", opts)
