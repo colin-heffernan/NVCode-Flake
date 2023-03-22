@@ -12,7 +12,7 @@ if not status_ok then
 	return
 end
 
-leap.add_default_mappings()
+--[[ leap.add_default_mappings() ]]
 
 -- Options variables
 local opts = {
@@ -39,12 +39,12 @@ end
 leap_spooky.setup {
 	affixes = {
 		remote = {
-			window = "R",
-			cross_window = "r"
+			window = "r",
+			cross_window = "R"
 		},
 		magnetic = {
-			window = "M",
-			cross_window = "m"
+			window = "m",
+			cross_window = "M"
 		}
 	}
 }
