@@ -50,7 +50,7 @@ dashboard.section.buttons.val = {
 	dashboard.button("o", "  Recently opened files", ":Telescope oldfiles<CR>"),
 	-- dashboard.button("p", "  Recently opened projects", ":Telescope projects<CR>"),
 	-- dashboard.button("n", "  New file", ":e scratch.txt<CR>"),
-	dashboard.button("n", "󰠮  Open notes", ":e ~/Notes/README.md<CR>"),
+	dashboard.button("n", "󰠮  Open notes", ":ZkTags<CR>"),
 	-- dashboard.button("u", "  Update plugins", ":PackerSync<CR>"),
 	dashboard.button("q", "  Quit NVCode", ":qa!<CR>"),
 }

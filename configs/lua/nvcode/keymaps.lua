@@ -30,9 +30,10 @@ keymap("n", "<Space>e", ":Neotree toggle<CR>", opts)
 keymap("n", "<C-Esc>", ":ToggleTerm direction=float<CR>", opts)
 keymap("t", "<C-Esc>", "<C-\\><C-n>:ToggleTerm<CR>", opts)
 
--- Search files
+-- Search
 keymap("n", "<Space>f", ":Telescope find_files hidden=true<CR>", opts)
 keymap("n", "<Space>o", ":Telescope oldfiles<CR>", opts)
+keymap("n", "<Space>n", ":ZkTags<CR>", opts)
 
 -- Visual
 -- Indents
