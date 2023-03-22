@@ -46,13 +46,7 @@ mkdnflow.setup {
 		context = 0,
 		implicit_extension = "md",
 		transform_explicit = false,
-		transform_implicit = function(input)
-			if input:match("%d%d%d%d%-%d%d%-%d%d") then
-				return("Journals/" .. input)
-			else
-				return("Pages/" .. input)
-			end
-		end
+		transform_implicit = false
 	},
 	tables = {
 		trim_whitespace = true,
