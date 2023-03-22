@@ -201,11 +201,23 @@
 			flake = false;
 		};
 
-		# Neorg
+		# Notes
 		neorg = {
 			url = "github:nvim-neorg/neorg";
 			flake = false;
 		};
+		mkdnflow = {
+			url = "github:jakewvincent/mkdnflow.nvim";
+			flake = false;
+		};
+		zk-nvim = {
+			url = "github:mickael-menu/zk-nvim";
+			flake = false;
+		};
+		# mind-nvim = {
+		# 	url = "github:phaazon/mind.nvim";
+		# 	flake = false;
+		# };
 
 		# Commenting
 		comment-nvim = {
@@ -405,6 +417,9 @@
 				# "octo-nvim"
 				"indent-blankline-nvim"
 				"neorg"
+				"mkdnflow"
+				"zk-nvim"
+				# "mind-nvim"
 				"comment-nvim"
 				"nvim-ts-context-commentstring"
 				"todo-comments-nvim"

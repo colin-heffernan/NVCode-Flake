@@ -61,6 +61,8 @@
 		cmp-buffer
 		cmp-cmdline
 		noice-nvim
+		zk-nvim
+		# mind-nvim
 	];
 	optPlugins = with pkgs.neovimPlugins; [
 		nvim-lspconfig
@@ -71,6 +73,7 @@
 		indent-blankline-nvim
 		gitsigns-nvim
 		neorg
+		mkdnflow
 		comment-nvim
 		# twilight-nvim
 		# zen-mode-nvim
