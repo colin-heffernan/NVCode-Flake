@@ -38,9 +38,9 @@ tokyonight.setup {
 		hl.TelescopeSelection = {
 			bg = c.bg_highlight
 		}
-		hl.NeoTreeWinSeparator = {
+		--[[ hl.NeoTreeWinSeparator = {
 			fg = c.bg
-		}
+		} ]]
 		hl.NotifyERRORBorder = {
 			bg = c.bg_dark,
 			fg = c.bg_dark
