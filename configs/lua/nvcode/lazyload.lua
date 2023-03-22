@@ -6,6 +6,7 @@ local function onFileOpen()
 	require("nvcode.indentblankline")
 	require("nvcode.gitsigns")
 	require("nvcode.neorg")
+	require("nvcode.mkdnflow")
 	require("nvcode.comment")
 	--[[ require("nvcode.zen") ]]
 	--[[ require("nvcode.trouble") ]]

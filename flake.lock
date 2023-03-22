@@ -287,6 +287,22 @@
         "type": "github"
       }
     },
+    "mkdnflow": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1677786610,
+        "narHash": "sha256-jWVCZ82os/VRjVaJuknXvERmZakQVOkg/OcirVxTmB8=",
+        "owner": "jakewvincent",
+        "repo": "mkdnflow.nvim",
+        "rev": "555bdbaf1daae077000b54c63dec323056b43155",
+        "type": "github"
+      },
+      "original": {
+        "owner": "jakewvincent",
+        "repo": "mkdnflow.nvim",
+        "type": "github"
+      }
+    },
     "neo-tree-nvim": {
       "flake": false,
       "locked": {
@@ -586,6 +602,7 @@
         "leap-spooky-nvim": "leap-spooky-nvim",
         "lualine-nvim": "lualine-nvim",
         "luasnip": "luasnip",
+        "mkdnflow": "mkdnflow",
         "neo-tree-nvim": "neo-tree-nvim",
         "neorg": "neorg",
         "neovim-nightly": "neovim-nightly",
@@ -635,7 +652,8 @@
         "tree-sitter-toml": "tree-sitter-toml",
         "tree-sitter-typescript": "tree-sitter-typescript",
         "tree-sitter-vim": "tree-sitter-vim",
-        "tree-sitter-yuck": "tree-sitter-yuck"
+        "tree-sitter-yuck": "tree-sitter-yuck",
+        "zk-nvim": "zk-nvim"
       }
     },
     "telescope-nvim": {
@@ -1115,6 +1133,22 @@
       "original": {
         "owner": "Philipp-M",
         "repo": "tree-sitter-yuck",
+        "type": "github"
+      }
+    },
+    "zk-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1679470099,
+        "narHash": "sha256-8sC0KhmKQyl5ywgJvvqgq+HalvA+rrAKJqYp3+rphvw=",
+        "owner": "mickael-menu",
+        "repo": "zk-nvim",
+        "rev": "50fc25b88fb28829ec7f5e5a4d4b458fca21a550",
+        "type": "github"
+      },
+      "original": {
+        "owner": "mickael-menu",
+        "repo": "zk-nvim",
         "type": "github"
       }
     }
