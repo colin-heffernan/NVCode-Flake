@@ -27,8 +27,8 @@ mkdnflow.setup {
 	},
 	create_dirs = false,
 	perspective = {
-		priority = "root",
-		fallback = "current",
+		priority = "current",
+		fallback = "root",
 		root_tell = "README.md",
 		nvim_md_heel = false,
 		update = false
