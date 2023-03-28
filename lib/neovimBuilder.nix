@@ -17,6 +17,7 @@
 		lualine-nvim
 		bufferline-nvim
 		# nvim-cokeline
+		heirline-nvim
 		alpha-nvim
 		neo-tree-nvim
 		telescope-nvim

@@ -66,6 +66,10 @@
 		# 	url = "github:noib3/nvim-cokeline";
 		# 	flake = false;
 		# };
+		heirline-nvim = {
+			url = "github:rebelot/heirline.nvim";
+			flake = false;
+		};
 		alpha-nvim = {
 			url = "github:goolord/alpha-nvim";
 			flake = false;
@@ -387,6 +391,7 @@
 				"lualine-nvim"
 				"bufferline-nvim"
 				# "nvim-cokeline"
+				"heirline-nvim"
 				"alpha-nvim"
 				"noice-nvim"
 				"neo-tree-nvim"

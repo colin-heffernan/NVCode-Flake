@@ -8,8 +8,9 @@ require("nvcode.notify")
 require("nvcode.colorscheme")
 require("nvcode.treesitter")
 require("nvcode.ccc")
-require("nvcode.lualine")
+--[[ require("nvcode.lualine") ]]
 require("nvcode.bufferline")
+require("nvcode.heirline")
 --[[ require("nvcode.cokeline") ]]
 require("nvcode.neotree")
 require("nvcode.telescope")

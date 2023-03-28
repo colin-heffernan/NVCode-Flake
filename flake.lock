@@ -207,6 +207,22 @@
         "type": "github"
       }
     },
+    "heirline-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1679833493,
+        "narHash": "sha256-Q+OptxBJ2r5DinzY5ddn5l1spaZyoE4bpSkYI9VlhpA=",
+        "owner": "rebelot",
+        "repo": "heirline.nvim",
+        "rev": "b55ad4af04d9c45dd8328fea65abb0b17274d6f0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "rebelot",
+        "repo": "heirline.nvim",
+        "type": "github"
+      }
+    },
     "indent-blankline-nvim": {
       "flake": false,
       "locked": {
@@ -597,6 +613,7 @@
         "comment-nvim": "comment-nvim",
         "friendly-snippets": "friendly-snippets",
         "gitsigns-nvim": "gitsigns-nvim",
+        "heirline-nvim": "heirline-nvim",
         "indent-blankline-nvim": "indent-blankline-nvim",
         "leap-nvim": "leap-nvim",
         "leap-spooky-nvim": "leap-spooky-nvim",
