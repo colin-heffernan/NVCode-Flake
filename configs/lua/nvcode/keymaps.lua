@@ -14,8 +14,8 @@ keymap("n", "<C-Left>", "<C-w>h", opts)
 keymap("n", "<C-Right>", "<C-w>l", opts)
 
 -- Buffer navigation
-keymap("n", "<S-Left>", ":BufferLineCyclePrev<CR>", opts)
-keymap("n", "<S-Right>", ":BufferLineCycleNext<CR>", opts)
+--[[ keymap("n", "<S-Left>", ":BufferLineCyclePrev<CR>", opts)
+keymap("n", "<S-Right>", ":BufferLineCycleNext<CR>", opts) ]]
 keymap("n", "<Space>k", ":BufferLinePickClose<CR>", opts)
 
 -- Splits

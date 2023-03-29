@@ -13,18 +13,21 @@ if not colors_status_ok then
 	return
 end
 
+local icons_status_ok, icons = pcall(require, "nvim-web-devicons")
+if not icons_status_ok then
+	vim.notify "Icons for Heirline not found."
+	return
+end
+
 local colors = tncolors.setup({ transform = true })
 
+local Align = { provider = "%=" }
+local Space = { provider = " " }
+
 local ViMode = {
-	-- get vim current mode, this information will be required by the provider
-	-- and the highlight functions, so we compute it only once per component
-	-- evaluation and store it as a component attribute
 	init = function(self)
 		self.mode = vim.fn.mode(1) -- :h mode()
 	end,
-	-- Now we define some dictionaries to map the output of mode() to the
-	-- corresponding string and color. We can put these into `static` to compute
-	-- them at initialisation time.
 	static = {
 		mode_names = {
 			n = "N",
@@ -63,57 +66,165 @@ local ViMode = {
 			["r?"] = "?",
 			["!"] = "!",
 			t = "T",
-		},
-		mode_colors = {
-			n = "red" ,
-			i = "green",
-			v = "cyan",
-			V =  "cyan",
-			["\22"] =  "cyan",
-			c =  "orange",
-			s =  "purple",
-			S =  "purple",
-			["\19"] =  "purple",
-			R =  "orange",
-			r =  "orange",
-			["!"] =  "red",
-			t =  "red",
 		}
 	},
-	-- We can now access the value of mode() that, by now, would have been
-	-- computed by `init()` and use it to index our strings dictionary.
-	-- note how `static` fields become just regular attributes once the
-	-- component is instantiated.
-	-- To be extra meticulous, we can also add some vim statusline syntax to
-	-- control the padding and make sure our string is always at least 2
-	-- characters long. Plus a nice Icon.
 	provider = function(self)
-		return " %1("..self.mode_names[self.mode].."%) "
+		return self.mode_names[self.mode]
 	end,
-	-- Same goes for the highlight. Now the foreground will change according to the current mode.
 	hl = function(self)
-		local mode = self.mode:sub(1, 1) -- get only the first mode character
-		return { fg = self.mode_colors[mode], bold = true, }
+		return { fg = "black", bold = true, }
 	end,
-	-- Re-evaluate the component only on ModeChanged event!
-	-- Also allorws the statusline to be re-evaluated when entering operator-pending mode
 	update = {
 		"ModeChanged",
 		pattern = "*:*",
 		callback = vim.schedule_wrap(function()
 			vim.cmd("redrawstatus")
 		end),
-	},
+	}
 }
 
-local Align = { provider = "%=" }
+local TablineFileIcon = {
+	init = function(self)
+		local filename = self.filename
+		local extension = vim.fn.fnamemodify(filename, ":e")
+		self.icon, self.icon_color = icons.get_icon_color(filename, extension, { default = true })
+	end,
+	provider = function(self)
+		return self.icon and (self.icon .. " ")
+	end,
+	hl = function(self)
+		return { fg = self.is_active and "black" or self.icon_color }
+	end
+}
 
-local DefaultStatusline = {
-	ViMode, Align
+local TablineFileName = {
+	provider = function(self)
+		local filename = self.filename
+		filename = filename == "" and "[No Name]" or vim.fn.fnamemodify(filename, ":t")
+		return filename
+	end,
+	hl = function(self)
+		return { bold = self.active }
+	end
+}
+
+local TablineFileFlags = {
+	{
+		condition = function(self)
+			return vim.api.nvim_buf_get_option(self.bufnr, "modified")
+		end,
+		provider = " ",
+		hl = function(self)
+			return { fg = self.is_active and "black" or self:mode_color() }
+		end
+	},
+	{
+		condition = function(self)
+			return not vim.api.nvim_buf_get_option(self.bufnr, "modifiable")
+				or vim.api.nvim_buf_get_option(self.bufnr, "readonly")
+		end,
+		provider = " ",
+		hl = function(self)
+			return { fg = self.is_active and "black" or "blue" }
+		end
+	}
+}
+
+local TablineBufferBlock = utils.surround({ "", "" }, function(self)
+	return self.is_active and self:mode_color() or "bg"
+end, {
+	init = function(self)
+		self.filename = vim.api.nvim_buf_get_name(self.bufnr)
+	end,
+	hl = function(self)
+		return { fg = self.is_active and "black" or "fg", bg = self.is_active and self:mode_color() or "bg" }
+	end,
+	Space, TablineFileIcon, TablineFileName, TablineFileFlags, Space
+})
+
+local Statusline = {
+	utils.surround({ "", "" }, function(self) return self:mode_color() end, { Space, ViMode, Space }),
+	utils.make_buflist(
+		TablineBufferBlock,
+		{ provider = "", hl = { fg = "bg" } },
+		{ provider = "", hl = { fg = "bg" } }
+	),
+	Align,
+	static = {
+		mode_colors = {
+			n = "blue",
+			no = "blue",
+			nov = "blue",
+			noV = "blue",
+			["no\22"] = "blue",
+			niI = "blue",
+			niR = "blue",
+			niV = "blue",
+			nt = "blue",
+			ntT = "blue",
+			v = "magenta",
+			vs = "magenta",
+			V = "magenta",
+			Vs = "magenta",
+			["\22"] = "magenta",
+			["\22s"] = "magenta",
+			s = "magenta",
+			S = "magenta",
+			["\19"] = "magenta",
+			i = "green",
+			ic = "green",
+			ix = "green",
+			R = "red",
+			Rc = "red",
+			Rx = "red",
+			Rv = "red",
+			Rvc = "red",
+			Rvx = "red",
+			c = "yellow",
+			cv = "yellow",
+			ce = "yellow",
+			r = "red",
+			rm = "yellow",
+			["r?"] = "yellow",
+			["!"] = "yellow",
+			t = "green1"
+		},
+		mode_color = function(self)
+			return self.mode_colors[vim.fn.mode()]
+		end
+	},
+	hl = {
+		bg = "black"
+	}
+}
+
+local GitColumn = {
+	--[[ init = function(self)
+		local signs = vim.fn.sign_getplaced(vim.api.nvim_get_current_buf(), {
+			group = "gitsigns"
+		})
+	end ]]
+}
+
+local LSPColumn = {}
+
+local NumColumn = {
+	Align,
+	{
+		provider = "%l"
+	},
+	Space
+}
+
+local StatusColumn = {
+	GitColumn,
+	LSPColumn,
+	NumColumn
 }
 
 heirline.setup {
-	statusline = DefaultStatusline,
+	statusline = Statusline,
+	statuscolumn = StatusColumn,
 	opts = {
 		colors = colors
 	}
