@@ -72,7 +72,7 @@ local ViMode = {
 		return self.mode_names[self.mode]
 	end,
 	hl = function(self)
-		return { fg = "black", bold = true, }
+		return { fg = colors.black, bold = true, }
 	end,
 	update = {
 		"ModeChanged",
@@ -93,7 +93,7 @@ local TablineFileIcon = {
 		return self.icon and (self.icon .. " ")
 	end,
 	hl = function(self)
-		return { fg = self.is_active and "black" or self.icon_color }
+		return { fg = self.is_active and colors.black or self.icon_color }
 	end
 }
 
@@ -115,7 +115,7 @@ local TablineFileFlags = {
 		end,
 		provider = " ",
 		hl = function(self)
-			return { fg = self.is_active and "black" or self:mode_color() }
+			return { fg = self.is_active and colors.black or self:mode_color() }
 		end
 	},
 	{
@@ -125,19 +125,19 @@ local TablineFileFlags = {
 		end,
 		provider = " ",
 		hl = function(self)
-			return { fg = self.is_active and "black" or "blue" }
+			return { fg = self.is_active and colors.black or colors.blue }
 		end
 	}
 }
 
 local TablineBufferBlock = utils.surround({ "", "" }, function(self)
-	return self.is_active and self:mode_color() or "comment"
+	return self.is_active and self:mode_color() or colors.comment
 end, {
 	init = function(self)
 		self.filename = vim.api.nvim_buf_get_name(self.bufnr)
 	end,
 	hl = function(self)
-		return { fg = self.is_active and "black" or "fg", bg = self.is_active and self:mode_color() or "comment" }
+		return { fg = self.is_active and colors.black or colors.fg, bg = self.is_active and self:mode_color() or colors.comment }
 	end,
 	Space, TablineFileIcon, TablineFileName, TablineFileFlags, Space
 })
@@ -146,55 +146,55 @@ local Statusline = {
 	utils.surround({ "", "" }, function(self) return self:mode_color() end, { Space, ViMode, Space }),
 	utils.make_buflist(
 		TablineBufferBlock,
-		{ provider = "", hl = { fg = "bg" } },
-		{ provider = "", hl = { fg = "bg" } }
+		{ provider = "", hl = { fg = colors.bg } },
+		{ provider = "", hl = { fg = colors.bg } }
 	),
 	Align,
 	static = {
 		mode_colors = {
-			n = "blue",
-			no = "blue",
-			nov = "blue",
-			noV = "blue",
-			["no\22"] = "blue",
-			niI = "blue",
-			niR = "blue",
-			niV = "blue",
-			nt = "blue",
-			ntT = "blue",
-			v = "magenta",
-			vs = "magenta",
-			V = "magenta",
-			Vs = "magenta",
-			["\22"] = "magenta",
-			["\22s"] = "magenta",
-			s = "magenta",
-			S = "magenta",
-			["\19"] = "magenta",
-			i = "green",
-			ic = "green",
-			ix = "green",
-			R = "red",
-			Rc = "red",
-			Rx = "red",
-			Rv = "red",
-			Rvc = "red",
-			Rvx = "red",
-			c = "yellow",
-			cv = "yellow",
-			ce = "yellow",
-			r = "red",
-			rm = "yellow",
-			["r?"] = "yellow",
-			["!"] = "yellow",
-			t = "green1"
+			n = colors.blue,
+			no = colors.blue,
+			nov = colors.blue,
+			noV = colors.blue,
+			["no\22"] = colors.blue,
+			niI = colors.blue,
+			niR = colors.blue,
+			niV = colors.blue,
+			nt = colors.blue,
+			ntT = colors.blue,
+			v = colors.magenta,
+			vs = colors.magenta,
+			V = colors.magenta,
+			Vs = colors.magenta,
+			["\22"] = colors.magenta,
+			["\22s"] = colors.magenta,
+			s = colors.magenta,
+			S = colors.magenta,
+			["\19"] = colors.magenta,
+			i = colors.green,
+			ic = colors.green,
+			ix = colors.green,
+			R = colors.red,
+			Rc = colors.red,
+			Rx = colors.red,
+			Rv = colors.red,
+			Rvc = colors.red,
+			Rvx = colors.red,
+			c = colors.yellow,
+			cv = colors.yellow,
+			ce = colors.yellow,
+			r = colors.red,
+			rm = colors.yellow,
+			["r?"] = colors.yellow,
+			["!"] = colors.yellow,
+			t = colors.green1
 		},
 		mode_color = function(self)
 			return self.mode_colors[vim.fn.mode()]
 		end
 	},
 	hl = {
-		bg = "black"
+		bg = colors.black
 	}
 }
 
@@ -202,44 +202,112 @@ local GitColumn = {
 	hl = function()
 		local sign = vim.fn.sign_getplaced(vim.api.nvim_get_current_buf(), {
 			group = "gitsigns_vimfn_signs_",
-			--[[ id = vim.v.lnum, ]]
 			lnum = vim.v.lnum
-		})
-		return { fg = sign ~= nil and sign.name or "red" }
+		})[1]["signs"][1]
+		if(sign ~= nil) then
+			return {
+				fg = sign.name == "GitSignsAdd" and colors.gitSigns.add
+					or sign.name == "GitSignsChange" and colors.gitSigns.change
+					or sign.name == "GitSignsDelete" and colors.gitSigns.delete
+					or colors.comment
+			}
+		else
+			return { fg = colors.comment }
+		end
 	end,
 	provider = function()
 		local sign = vim.fn.sign_getplaced(vim.api.nvim_get_current_buf(), {
 			group = "gitsigns_vimfn_signs_",
-			--[[ id = vim.v.lnum, ]]
 			lnum = vim.v.lnum
-		})
-		return sign ~= nil and " ▏" or "  "
-		--[[ return sign ~= nil and sign or "  " ]]
-		--[[ return sign.name ]]
-	end,
-	--[[ provider = " ▏" ]]
+		})[1]["signs"][1]
+		if(sign ~= nil) then
+			return sign.name == "GitSignsAdd" and " + "
+				or sign.name == "GitSignsChange" and " ~ "
+				or sign.name == "GitSignsDelete" and " - "
+				or "   "
+		else
+			return "   "
+		end
+	end
 }
 
 local LSPColumn = {
-	Align,
-	{
-		provider = "%s"
-	},
-	Space
+	hl = function()
+		local signs = vim.fn.sign_getplaced(vim.api.nvim_get_current_buf(), {
+			group = "*",
+			lnum = vim.v.lnum
+		})[1]["signs"]
+		local diagnostic_signs = vim.tbl_filter(function(i)
+			return vim.startswith(i.group, "vim.diagnostic")
+		end, signs)
+		local sign = diagnostic_signs[1]
+		if(sign ~= nil) then
+			return { fg = sign.name == "DiagnosticSignError" and colors.error
+				or sign.name == "DiagnosticSignWarn" and colors.warning
+				or sign.name == "DiagnosticSignInfo" and colors.info
+				or sign.name == "DiagnosticSignHint" and colors.hint
+				or colors.comment }
+		else
+			return { fg = colors.comment }
+		end
+	end,
+	provider = function()
+		local signs = vim.fn.sign_getplaced(vim.api.nvim_get_current_buf(), {
+			group = "*",
+			lnum = vim.v.lnum
+		})[1]["signs"]
+		local diagnostic_signs = vim.tbl_filter(function(i)
+			return vim.startswith(i.group, "vim.diagnostic")
+		end, signs)
+		local sign = diagnostic_signs[1]
+		if(sign ~= nil) then
+			return sign.name == "DiagnosticSignError" and " "
+				or sign.name == "DiagnosticSignWarn" and " "
+				or sign.name == "DiagnosticSignInfo" and " "
+				or sign.name == "DiagnosticSignHint" and " "
+				or "  "
+		else
+			return "  "
+		end
+	end
 }
 
 local NumColumn = {
 	Align,
 	{
-		provider = "%l"
-	},
-	Space
+		provider = function()
+			return vim.v.lnum
+		end
+	}
 }
 
 local StatusColumn = {
+	condition = function()
+		return not conditions.buffer_matches({
+			buftype = {
+				"terminal",
+				"nofile",
+			},
+			filetype = {
+				"help",
+				"dashboard",
+				"alpha",
+				"lspinfo",
+				"lsp-installer",
+				"TelescopePrompt",
+				"TelescopeResults",
+				"packer",
+				"NvimTree",
+				"neo-tree",
+				"norg",
+			}
+		})
+	end,
 	LSPColumn,
+	Space,
 	NumColumn,
-	--[[ GitColumn, ]]
+	Space,
+	GitColumn
 }
 
 heirline.setup {
