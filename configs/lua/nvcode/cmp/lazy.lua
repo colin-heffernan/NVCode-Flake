@@ -89,7 +89,7 @@ cmp.setup {
 			vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
 			vim_item.menu = ({
 				nvim_lsp = "[LSP]",
-				neorg = "[Neorg]",
+				--[[ neorg = "[Neorg]", ]]
 				--[[ luasnip = "[Snippet]", ]]
 				--[[ buffer = "[Buffer]", ]]
 				path = "[Path]",
@@ -100,7 +100,7 @@ cmp.setup {
 	},
 	sources = {
 		{ name = "nvim_lsp" },
-		{ name = "neorg" },
+		--[[ { name = "neorg" }, ]]
 		--[[ { name = "luasnip" }, ]]
 		--[[ { name = "buffer" }, ]]
 		{ name = "path" },
@@ -112,7 +112,8 @@ cmp.setup {
 	},
 	window = {
 		documentation = {
-			border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+			--[[ border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" }, ]]
+			border = { " ", " ", " ", " ", " ", " ", " ", " " },
 		},
 	},
 	experimental = {

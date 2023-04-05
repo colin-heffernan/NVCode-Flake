@@ -5,7 +5,7 @@ local function onFileOpen()
 	require("nvcode.cmp.lazy")
 	require("nvcode.indentblankline")
 	require("nvcode.gitsigns")
-	require("nvcode.neorg")
+	--[[ require("nvcode.neorg") ]]
 	require("nvcode.mkdnflow")
 	require("nvcode.comment")
 	--[[ require("nvcode.zen") ]]

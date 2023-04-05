@@ -14,8 +14,8 @@
 		# hydra-nvim
 		nvim-web-devicons
 		tokyonight-nvim
-		lualine-nvim
-		bufferline-nvim
+		# lualine-nvim
+		# bufferline-nvim
 		# nvim-cokeline
 		heirline-nvim
 		alpha-nvim
@@ -73,7 +73,7 @@
 		# nvim-dap-ui
 		indent-blankline-nvim
 		gitsigns-nvim
-		neorg
+		# neorg
 		mkdnflow
 		comment-nvim
 		# twilight-nvim

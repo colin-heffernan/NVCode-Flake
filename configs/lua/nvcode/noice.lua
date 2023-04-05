@@ -17,12 +17,12 @@ noice.setup {
 			}
 		}
 	},
-	lsp = {
+	--[[ lsp = {
 		signature = {
 			enabled = false
 		},
 		hover = {
 			enabled = false
 		}
-	}
+	} ]]
 }
