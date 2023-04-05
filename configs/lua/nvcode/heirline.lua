@@ -131,13 +131,13 @@ local TablineFileFlags = {
 }
 
 local TablineBufferBlock = utils.surround({ "", "" }, function(self)
-	return self.is_active and self:mode_color() or "bg"
+	return self.is_active and self:mode_color() or "comment"
 end, {
 	init = function(self)
 		self.filename = vim.api.nvim_buf_get_name(self.bufnr)
 	end,
 	hl = function(self)
-		return { fg = self.is_active and "black" or "fg", bg = self.is_active and self:mode_color() or "bg" }
+		return { fg = self.is_active and "black" or "fg", bg = self.is_active and self:mode_color() or "comment" }
 	end,
 	Space, TablineFileIcon, TablineFileName, TablineFileFlags, Space
 })
@@ -199,14 +199,34 @@ local Statusline = {
 }
 
 local GitColumn = {
-	--[[ init = function(self)
-		local signs = vim.fn.sign_getplaced(vim.api.nvim_get_current_buf(), {
-			group = "gitsigns"
+	hl = function()
+		local sign = vim.fn.sign_getplaced(vim.api.nvim_get_current_buf(), {
+			group = "gitsigns_vimfn_signs_",
+			--[[ id = vim.v.lnum, ]]
+			lnum = vim.v.lnum
 		})
-	end ]]
+		return { fg = sign ~= nil and sign.name or "red" }
+	end,
+	provider = function()
+		local sign = vim.fn.sign_getplaced(vim.api.nvim_get_current_buf(), {
+			group = "gitsigns_vimfn_signs_",
+			--[[ id = vim.v.lnum, ]]
+			lnum = vim.v.lnum
+		})
+		return sign ~= nil and " ▏" or "  "
+		--[[ return sign ~= nil and sign or "  " ]]
+		--[[ return sign.name ]]
+	end,
+	--[[ provider = " ▏" ]]
 }
 
-local LSPColumn = {}
+local LSPColumn = {
+	Align,
+	{
+		provider = "%s"
+	},
+	Space
+}
 
 local NumColumn = {
 	Align,
@@ -217,9 +237,9 @@ local NumColumn = {
 }
 
 local StatusColumn = {
-	GitColumn,
 	LSPColumn,
-	NumColumn
+	NumColumn,
+	--[[ GitColumn, ]]
 }
 
 heirline.setup {
