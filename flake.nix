@@ -74,10 +74,10 @@
 			url = "github:goolord/alpha-nvim";
 			flake = false;
 		};
-		veil-nvim = {
-			url = "github:willothy/veil.nvim";
-			flake = false;
-		};
+		# veil-nvim = {
+		# 	url = "github:willothy/veil.nvim";
+		# 	flake = false;
+		# };
 		noice-nvim = {
 			url = "github:folke/noice.nvim";
 			flake = false;
@@ -108,10 +108,10 @@
 			url = "github:neovim/nvim-lspconfig";
 			flake = false;
 		};
-		null-ls-nvim = {
-			url = "github:jose-elias-alvarez/null-ls.nvim";
-			flake = false;
-		};
+		# null-ls-nvim = {
+		# 	url = "github:jose-elias-alvarez/null-ls.nvim";
+		# 	flake = false;
+		# };
 		SchemaStore-nvim = {
 			url = "github:b0o/SchemaStore.nvim";
 			flake = false;
@@ -210,10 +210,10 @@
 		};
 
 		# Notes
-		neorg = {
-			url = "github:nvim-neorg/neorg";
-			flake = false;
-		};
+		# neorg = {
+		# 	url = "github:nvim-neorg/neorg";
+		# 	flake = false;
+		# };
 		mkdnflow = {
 			url = "github:jakewvincent/mkdnflow.nvim";
 			flake = false;
@@ -392,19 +392,19 @@
 				# "hydra-nvim"
 				"nvim-web-devicons"
 				"tokyonight-nvim"
-				"lualine-nvim"
-				"bufferline-nvim"
+				# "lualine-nvim"
+				# "bufferline-nvim"
 				# "nvim-cokeline"
 				"heirline-nvim"
 				"alpha-nvim"
-				"veil-nvim"
+				# "veil-nvim"
 				"noice-nvim"
 				"neo-tree-nvim"
 				"telescope-nvim"
 				# "project-nvim"
 				"toggleterm-nvim"
 				"nvim-lspconfig"
-				"null-ls-nvim"
+				# "null-ls-nvim"
 				"SchemaStore-nvim"
 				"nvim-treesitter"
 				# "nvim-treesitter-textobjects"
@@ -426,7 +426,7 @@
 				"gitsigns-nvim"
 				# "octo-nvim"
 				"indent-blankline-nvim"
-				"neorg"
+				# "neorg"
 				"mkdnflow"
 				"zk-nvim"
 				# "mind-nvim"

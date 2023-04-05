@@ -19,7 +19,7 @@
 		# nvim-cokeline
 		heirline-nvim
 		alpha-nvim
-		veil-nvim
+		# veil-nvim
 		neo-tree-nvim
 		telescope-nvim
 		# project-nvim
@@ -68,7 +68,7 @@
 	];
 	optPlugins = with pkgs.neovimPlugins; [
 		nvim-lspconfig
-		null-ls-nvim
+		# null-ls-nvim
 		SchemaStore-nvim
 		# nvim-dap
 		# nvim-dap-ui

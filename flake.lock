@@ -304,22 +304,6 @@
         "type": "github"
       }
     },
-    "neorg": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1680050860,
-        "narHash": "sha256-AKWKA8fzJks0opAfxeaC2jGLtmUGitm6eOXXfOffBqs=",
-        "owner": "nvim-neorg",
-        "repo": "neorg",
-        "rev": "01d8a9b2db38a28fd40851b894e9d146d279c892",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nvim-neorg",
-        "repo": "neorg",
-        "type": "github"
-      }
-    },
     "neovim-nightly": {
       "inputs": {
         "flake-utils": "flake-utils",
@@ -388,22 +372,6 @@
       "original": {
         "owner": "MunifTanjim",
         "repo": "nui.nvim",
-        "type": "github"
-      }
-    },
-    "null-ls-nvim": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1679586153,
-        "narHash": "sha256-kWmPlMtv0LIksakW49Fobm1uzAuwxxLdNS3UvyMDNtY=",
-        "owner": "jose-elias-alvarez",
-        "repo": "null-ls.nvim",
-        "rev": "0180603b6f3cee40f83c6fc226b9ac5f85e691c4",
-        "type": "github"
-      },
-      "original": {
-        "owner": "jose-elias-alvarez",
-        "repo": "null-ls.nvim",
         "type": "github"
       }
     },
@@ -587,12 +555,10 @@
         "luasnip": "luasnip",
         "mkdnflow": "mkdnflow",
         "neo-tree-nvim": "neo-tree-nvim",
-        "neorg": "neorg",
         "neovim-nightly": "neovim-nightly",
         "nixpkgs": "nixpkgs",
         "noice-nvim": "noice-nvim",
         "nui-nvim": "nui-nvim",
-        "null-ls-nvim": "null-ls-nvim",
         "nvim-autopairs": "nvim-autopairs",
         "nvim-cmp": "nvim-cmp",
         "nvim-lspconfig": "nvim-lspconfig",
@@ -636,7 +602,6 @@
         "tree-sitter-typescript": "tree-sitter-typescript",
         "tree-sitter-vim": "tree-sitter-vim",
         "tree-sitter-yuck": "tree-sitter-yuck",
-        "veil-nvim": "veil-nvim",
         "zk-nvim": "zk-nvim"
       }
     },
@@ -1117,22 +1082,6 @@
       "original": {
         "owner": "Philipp-M",
         "repo": "tree-sitter-yuck",
-        "type": "github"
-      }
-    },
-    "veil-nvim": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1680384724,
-        "narHash": "sha256-g3wj9uXLeFtaQkPdxuTOY66ZMQ9wLha86zkeh/+YfnY=",
-        "owner": "willothy",
-        "repo": "veil.nvim",
-        "rev": "ec18376953b401d784756a47df38a75ece40f3e9",
-        "type": "github"
-      },
-      "original": {
-        "owner": "willothy",
-        "repo": "veil.nvim",
         "type": "github"
       }
     },

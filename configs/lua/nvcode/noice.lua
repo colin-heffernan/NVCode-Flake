@@ -16,13 +16,5 @@ noice.setup {
 				winhighlight = "NormalFloat:NormalFloat,FloatBorder:FloatBorder"
 			}
 		}
-	},
-	--[[ lsp = {
-		signature = {
-			enabled = false
-		},
-		hover = {
-			enabled = false
-		}
-	} ]]
+	}
 }
