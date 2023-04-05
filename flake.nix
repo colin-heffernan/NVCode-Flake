@@ -54,14 +54,14 @@
 			url = "github:folke/tokyonight.nvim";
 			flake = false;
 		};
-		lualine-nvim = {
-			url = "github:nvim-lualine/lualine.nvim";
-			flake = false;
-		};
-		bufferline-nvim = {
-			url = "github:akinsho/bufferline.nvim";
-			flake = false;
-		};
+		# lualine-nvim = {
+		# 	url = "github:nvim-lualine/lualine.nvim";
+		# 	flake = false;
+		# };
+		# bufferline-nvim = {
+		# 	url = "github:akinsho/bufferline.nvim";
+		# 	flake = false;
+		# };
 		# nvim-cokeline = {
 		# 	url = "github:noib3/nvim-cokeline";
 		# 	flake = false;
@@ -72,6 +72,10 @@
 		};
 		alpha-nvim = {
 			url = "github:goolord/alpha-nvim";
+			flake = false;
+		};
+		veil-nvim = {
+			url = "github:willothy/veil.nvim";
 			flake = false;
 		};
 		noice-nvim = {
@@ -393,6 +397,7 @@
 				# "nvim-cokeline"
 				"heirline-nvim"
 				"alpha-nvim"
+				"veil-nvim"
 				"noice-nvim"
 				"neo-tree-nvim"
 				"telescope-nvim"

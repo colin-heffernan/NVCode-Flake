@@ -19,6 +19,7 @@
 		# nvim-cokeline
 		heirline-nvim
 		alpha-nvim
+		veil-nvim
 		neo-tree-nvim
 		telescope-nvim
 		# project-nvim

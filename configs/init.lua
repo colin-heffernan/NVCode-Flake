@@ -21,4 +21,5 @@ require("nvcode.cmp.auto")
 require("nvcode.noice")
 require("nvcode.zk")
 require("nvcode.lazyload")
-require("nvcode.alpha")
+--[[ require("nvcode.alpha") ]]
+require("nvcode.veil")

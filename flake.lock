@@ -32,22 +32,6 @@
         "type": "github"
       }
     },
-    "bufferline-nvim": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1677796018,
-        "narHash": "sha256-tuGitJQ2eXB9/SIHAyPrEVgy2n++GOlBOPLvFv3Ds4E=",
-        "owner": "akinsho",
-        "repo": "bufferline.nvim",
-        "rev": "3677aceb9a72630b0613e56516c8f7151b86f95c",
-        "type": "github"
-      },
-      "original": {
-        "owner": "akinsho",
-        "repo": "bufferline.nvim",
-        "type": "github"
-      }
-    },
     "ccc-nvim": {
       "flake": false,
       "locked": {
@@ -268,22 +252,6 @@
       "original": {
         "owner": "ggandor",
         "repo": "leap-spooky.nvim",
-        "type": "github"
-      }
-    },
-    "lualine-nvim": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1676394253,
-        "narHash": "sha256-mItWWRqWj9a/JaW8sccnGBijBsvvnh/b4q/S60UwYwc=",
-        "owner": "nvim-lualine",
-        "repo": "lualine.nvim",
-        "rev": "e99d733e0213ceb8f548ae6551b04ae32e590c80",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nvim-lualine",
-        "repo": "lualine.nvim",
         "type": "github"
       }
     },
@@ -603,7 +571,6 @@
       "inputs": {
         "SchemaStore-nvim": "SchemaStore-nvim",
         "alpha-nvim": "alpha-nvim",
-        "bufferline-nvim": "bufferline-nvim",
         "ccc-nvim": "ccc-nvim",
         "cmp-buffer": "cmp-buffer",
         "cmp-cmdline": "cmp-cmdline",
@@ -617,7 +584,6 @@
         "indent-blankline-nvim": "indent-blankline-nvim",
         "leap-nvim": "leap-nvim",
         "leap-spooky-nvim": "leap-spooky-nvim",
-        "lualine-nvim": "lualine-nvim",
         "luasnip": "luasnip",
         "mkdnflow": "mkdnflow",
         "neo-tree-nvim": "neo-tree-nvim",
@@ -670,6 +636,7 @@
         "tree-sitter-typescript": "tree-sitter-typescript",
         "tree-sitter-vim": "tree-sitter-vim",
         "tree-sitter-yuck": "tree-sitter-yuck",
+        "veil-nvim": "veil-nvim",
         "zk-nvim": "zk-nvim"
       }
     },
@@ -1150,6 +1117,22 @@
       "original": {
         "owner": "Philipp-M",
         "repo": "tree-sitter-yuck",
+        "type": "github"
+      }
+    },
+    "veil-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1680384724,
+        "narHash": "sha256-g3wj9uXLeFtaQkPdxuTOY66ZMQ9wLha86zkeh/+YfnY=",
+        "owner": "willothy",
+        "repo": "veil.nvim",
+        "rev": "ec18376953b401d784756a47df38a75ece40f3e9",
+        "type": "github"
+      },
+      "original": {
+        "owner": "willothy",
+        "repo": "veil.nvim",
         "type": "github"
       }
     },
