@@ -1,3 +1,11 @@
+vim.api.nvim_exec(
+	[[
+		packadd plenary-nvim
+		packadd neo-tree-nvim
+	]],
+	true
+)
+
 local status_ok, nvim_tree = pcall(require, "neo-tree")
 if not status_ok then
 	vim.notify "NeoTree not found."

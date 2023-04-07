@@ -1,3 +1,13 @@
+require("nvcode.indentblankline")
+require("nvcode.todo")
+vim.api.nvim_exec(
+	[[
+		packadd plenary-nvim
+		packadd telescope-nvim
+	]],
+	true
+)
+
 local status_ok, telescope = pcall(require, "telescope")
 if not status_ok then
 	vim.notify "Telescope not found."
@@ -21,5 +31,3 @@ telescope.setup {
 }
 
 telescope.load_extension("notify")
--- telescope.load_extension("octo")
--- telescope.load_extension("projects")
