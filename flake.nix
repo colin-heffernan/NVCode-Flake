@@ -8,7 +8,8 @@
 
 		# Neovim Nightly
 		neovim-nightly = {
-			url = "github:neovim/neovim?dir=contrib";
+			# url = "github:neovim/neovim?dir=contrib";
+			url = "github:neovim/neovim?dir=contrib&rev=eac75a971d042bd610310314e6c64097694ee418";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
 
@@ -395,6 +396,7 @@
 								(if builtins.typeOf p == "set" then baseNameOf p.name else baseNameOf) != "neovim-build-make-generated-source-files-reproducible.patch")
 							old.patches;
 						});
+						# neovim-unwrapped = neovim-nightly.packages.${prev.system}.neovim;
 						# vimPlugins = prev.vimPlugins.override {
 						# 	plugins.nvim-treesitter.src = inputs.nvim-treesitter;
 						# };
