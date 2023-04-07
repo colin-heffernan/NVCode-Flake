@@ -1,8 +1,8 @@
 vim.api.nvim_exec(
 	[[
+		packadd nvim-treesitter
 		packadd nvim-ts-autotag
 		packadd nvim-ts-context-commentstring
-		packadd nvim-treesitter
 	]],
 	true
 )
@@ -14,9 +14,6 @@ if not status_ok then
 end
 
 configs.setup {
-	autopairs = {
-		enable = true,
-	},
 	autotag = {
 		enable = true,
 	},

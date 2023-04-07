@@ -8,6 +8,7 @@ vim.api.nvim_exec(
 		packadd luasnip
 		packadd cmp_luasnip
 		runtime after/plugin/cmp_luasnip.lua
+		packadd nvim-cmp
 	]],
 	true
 )

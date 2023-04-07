@@ -1,12 +1,12 @@
 vim.api.nvim_exec(
 	[[
+		packadd nvim-cmp
 		packadd cmp-path
 		runtime after/plugin/cmp_path.lua
 		packadd cmp-buffer
 		runtime after/plugin/cmp_buffer.lua
 		packadd cmp-cmdline
 		runtime after/plugin/cmp_cmdline.lua
-		packadd nvim-cmp
 	]],
 	true
 )
