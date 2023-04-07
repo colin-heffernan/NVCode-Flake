@@ -37,12 +37,6 @@
 			flake = false;
 		};
 
-		# Keymaps
-		# hydra-nvim = {
-		# 	url = "github:anuvyklack/hydra.nvim";
-		# 	flake = false;
-		# };
-
 		# Icons
 		nvim-web-devicons = {
 			url = "github:kyazdani42/nvim-web-devicons";
@@ -54,18 +48,6 @@
 			url = "github:folke/tokyonight.nvim";
 			flake = false;
 		};
-		# lualine-nvim = {
-		# 	url = "github:nvim-lualine/lualine.nvim";
-		# 	flake = false;
-		# };
-		# bufferline-nvim = {
-		# 	url = "github:akinsho/bufferline.nvim";
-		# 	flake = false;
-		# };
-		# nvim-cokeline = {
-		# 	url = "github:noib3/nvim-cokeline";
-		# 	flake = false;
-		# };
 		heirline-nvim = {
 			url = "github:rebelot/heirline.nvim";
 			flake = false;
@@ -74,10 +56,6 @@
 			url = "github:goolord/alpha-nvim";
 			flake = false;
 		};
-		# veil-nvim = {
-		# 	url = "github:willothy/veil.nvim";
-		# 	flake = false;
-		# };
 		noice-nvim = {
 			url = "github:folke/noice.nvim";
 			flake = false;
@@ -92,10 +70,6 @@
 			url = "github:nvim-telescope/telescope.nvim";
 			flake = false;
 		};
-		# project-nvim = {
-		# 	url = "github:ahmedkhalf/project.nvim";
-		# 	flake = false;
-		# };
 
 		# Terminal
 		toggleterm-nvim = {
@@ -108,10 +82,6 @@
 			url = "github:neovim/nvim-lspconfig";
 			flake = false;
 		};
-		# null-ls-nvim = {
-		# 	url = "github:jose-elias-alvarez/null-ls.nvim";
-		# 	flake = false;
-		# };
 		SchemaStore-nvim = {
 			url = "github:b0o/SchemaStore.nvim";
 			flake = false;
@@ -120,28 +90,6 @@
 			url = "github:nvim-treesitter/nvim-treesitter";
 			flake = false;
 		};
-		# nvim-treesitter-textobjects = {
-		# 	url = "github:nvim-treesitter/nvim-treesitter-textobjects";
-		# 	flake = false;
-		# };
-		# trouble-nvim = {
-		# 	url = "github:folke/trouble.nvim";
-		# 	flake = false;
-		# };
-		# lspsaga-nvim = {
-		# 	url = "github:glepnir/lspsaga.nvim";
-		# 	flake = false;
-		# };
-
-		# Debugging
-		# nvim-dap = {
-		# 	url = "github:mfussenegger/nvim-dap";
-		# 	flake = false;
-		# };
-		# nvim-dap-ui = {
-		# 	url = "github:rcarriga/nvim-dap-ui";
-		# 	flake = false;
-		# };
 
 		# Completion
 		nvim-cmp = {
@@ -152,10 +100,6 @@
 			url = "github:hrsh7th/cmp-path";
 			flake = false;
 		};
-		# cmp-calc = {
-		# 	url = "github:hrsh7th/cmp-calc";
-		# 	flake = false;
-		# };
 		cmp-nvim-lsp = {
 			url = "github:hrsh7th/cmp-nvim-lsp";
 			flake = false;
@@ -198,10 +142,6 @@
 			url = "github:lewis6991/gitsigns.nvim";
 			flake = false;
 		};
-		# octo-nvim = {
-		# 	url = "github:pwntester/octo.nvim";
-		# 	flake = false;
-		# };
 
 		# Indent lines
 		indent-blankline-nvim = {
@@ -210,10 +150,6 @@
 		};
 
 		# Notes
-		# neorg = {
-		# 	url = "github:nvim-neorg/neorg";
-		# 	flake = false;
-		# };
 		mkdnflow = {
 			url = "github:jakewvincent/mkdnflow.nvim";
 			flake = false;
@@ -222,10 +158,6 @@
 			url = "github:mickael-menu/zk-nvim";
 			flake = false;
 		};
-		# mind-nvim = {
-		# 	url = "github:phaazon/mind.nvim";
-		# 	flake = false;
-		# };
 
 		# Commenting
 		comment-nvim = {
@@ -240,16 +172,6 @@
 			url = "github:folke/todo-comments.nvim";
 			flake = false;
 		};
-
-		# Zen Mode
-		# zen-mode-nvim = {
-		# 	url = "github:folke/zen-mode.nvim";
-		# 	flake = false;
-		# };
-		# twilight-nvim = {
-		# 	url = "github:folke/twilight.nvim";
-		# 	flake = false;
-		# };
 
 		# Colors
 		ccc-nvim = {
@@ -266,12 +188,6 @@
 			url = "github:ggandor/leap-spooky.nvim";
 			flake = false;
 		};
-
-		##### Language Servers
-		# All following Nixpkgs for now
-
-		##### Null-ls Dependencies
-		# All following Nixpkgs for now
 
 		##### Treesitter Lanugages
 		tree-sitter-bash = {
