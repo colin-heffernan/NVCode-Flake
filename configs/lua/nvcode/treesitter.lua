@@ -1,3 +1,12 @@
+vim.api.nvim_exec(
+	[[
+		packadd nvim-ts-autotag
+		packadd nvim-ts-context-commentstring
+		packadd nvim-treesitter
+	]],
+	true
+)
+
 local status_ok, configs = pcall(require, "nvim-treesitter.configs")
 if not status_ok then
 	vim.notify "Treesitter not found."

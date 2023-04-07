@@ -13,18 +13,18 @@
 		nvim-web-devicons
 		heirline-nvim
 		alpha-nvim
-		nvim-ts-autotag
-		nvim-ts-context-commentstring
-		nvim-treesitter.withAllGrammars
 		ccc-nvim
-		cmp-path
-		cmp-buffer
-		cmp-cmdline
-		nvim-cmp
 		noice-nvim
 		zk-nvim
 	];
 	optPlugins = with pkgs.neovimPlugins; [
+		nvim-ts-autotag
+		nvim-ts-context-commentstring
+		nvim-treesitter.withAllGrammars
+		cmp-path
+		cmp-buffer
+		cmp-cmdline
+		nvim-cmp
 		plenary-nvim
 		popup-nvim
 		neo-tree-nvim

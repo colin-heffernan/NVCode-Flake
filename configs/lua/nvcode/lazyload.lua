@@ -2,6 +2,7 @@
 local function onFileOpen()
 	require("nvcode.lsp")
 	require("nvcode.indentblankline")
+	require("nvcode.treesitter")
 	require("nvcode.gitsigns")
 	require("nvcode.mkdnflow")
 	require("nvcode.comment")
@@ -19,13 +20,27 @@ vim.api.nvim_create_autocmd(
 -- Load configs for lazyloaded plugins on InsertEnter
 local function onInsert()
 	require("nvcode.autopairs")
-	require("nvcode.cmp.lazy")
+	require("nvcode.cmp.cmdline")
+	require("nvcode.cmp.file")
 end
 
 vim.api.nvim_create_autocmd(
 	{"InsertEnter"},
 	{
 		callback = onInsert
+	}
+)
+
+-- Load configs for lazyloaded plugins on CmdlineEnter
+local function onCmd()
+	require("nvcode.treesitter")
+	require("nvcode.cmp.cmdline")
+end
+
+vim.api.nvim_create_autocmd(
+	{"CmdlineEnter"},
+	{
+		callback = onCmd
 	}
 )
 

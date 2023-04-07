@@ -1,3 +1,16 @@
+vim.api.nvim_exec(
+	[[
+		packadd cmp-path
+		runtime after/plugin/cmp_path.lua
+		packadd cmp-buffer
+		runtime after/plugin/cmp_buffer.lua
+		packadd cmp-cmdline
+		runtime after/plugin/cmp_cmdline.lua
+		packadd nvim-cmp
+	]],
+	true
+)
+
 local cmp_status_ok, cmp = pcall(require, "cmp")
 if not cmp_status_ok then
 	vim.notify "CMP not found."

@@ -1,5 +1,6 @@
 require("nvcode.indentblankline")
 require("nvcode.todo")
+require("nvcode.treesitter")
 vim.api.nvim_exec(
 	[[
 		packadd plenary-nvim
