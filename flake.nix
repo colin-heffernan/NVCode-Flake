@@ -151,12 +151,16 @@
 		};
 
 		# Notes
-		mkdnflow = {
-			url = "github:jakewvincent/mkdnflow.nvim";
-			flake = false;
-		};
-		zk-nvim = {
-			url = "github:mickael-menu/zk-nvim";
+		# mkdnflow = {
+		# 	url = "github:jakewvincent/mkdnflow.nvim";
+		# 	flake = false;
+		# };
+		# zk-nvim = {
+		# 	url = "github:mickael-menu/zk-nvim";
+		# 	flake = false;
+		# };
+		telekasten-nvim = {
+			url = "github:renerocksai/telekasten.nvim";
 			flake = false;
 		};
 
@@ -175,8 +179,8 @@
 		};
 
 		# Colors
-		ccc-nvim = {
-			url = "github:uga-rosa/ccc.nvim";
+		nvim-colorizer-lua = {
+			url = "github:NvChad/nvim-colorizer.lua";
 			flake = false;
 		};
 
@@ -306,32 +310,19 @@
 				"nui-nvim"
 				"popup-nvim"
 				"nvim-notify"
-				# "hydra-nvim"
 				"nvim-web-devicons"
 				"tokyonight-nvim"
-				# "lualine-nvim"
-				# "bufferline-nvim"
-				# "nvim-cokeline"
 				"heirline-nvim"
 				"alpha-nvim"
-				# "veil-nvim"
 				"noice-nvim"
 				"neo-tree-nvim"
 				"telescope-nvim"
-				# "project-nvim"
 				"toggleterm-nvim"
 				"nvim-lspconfig"
-				# "null-ls-nvim"
 				"SchemaStore-nvim"
 				"nvim-treesitter"
-				# "nvim-treesitter-textobjects"
-				# "trouble-nvim"
-				# "lspsaga-nvim"
-				# "nvim-dap"
-				# "nvim-dap-ui"
 				"nvim-cmp"
 				"cmp-path"
-				# "cmp-calc"
 				"cmp-nvim-lsp"
 				"cmp-buffer"
 				"cmp-cmdline"
@@ -341,18 +332,14 @@
 				"nvim-autopairs"
 				"nvim-ts-autotag"
 				"gitsigns-nvim"
-				# "octo-nvim"
 				"indent-blankline-nvim"
-				# "neorg"
-				"mkdnflow"
-				"zk-nvim"
-				# "mind-nvim"
+				# "mkdnflow"
+				# "zk-nvim"
+				"telekasten-nvim"
 				"comment-nvim"
 				"nvim-ts-context-commentstring"
 				"todo-comments-nvim"
-				# "zen-mode-nvim"
-				# "twilight-nvim"
-				"ccc-nvim"
+				"nvim-colorizer-lua"
 				"leap-nvim"
 				"leap-spooky-nvim"
 			];

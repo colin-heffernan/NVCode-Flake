@@ -37,6 +37,13 @@ colorizer.setup {
 		css_fn = true,
 		mode = "background",
 		tailwind = true,
+		sass = {
+			enable = true,
+			parsers = {
+				"css"
+			}
+		},
+		always_update = true
 	},
 	buftypes = {
 		"*",

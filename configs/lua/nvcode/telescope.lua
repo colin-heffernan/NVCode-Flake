@@ -1,4 +1,4 @@
-require("nvcode.indentblankline")
+require("nvcode.colorizer")
 require("nvcode.todo")
 require("nvcode.treesitter")
 vim.api.nvim_exec(
