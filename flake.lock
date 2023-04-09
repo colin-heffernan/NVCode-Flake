@@ -32,22 +32,6 @@
         "type": "github"
       }
     },
-    "ccc-nvim": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1680271664,
-        "narHash": "sha256-UQwIf96eG79iEBDhQvfjByrAc+LXyKiT4EVrPe1+YmY=",
-        "owner": "uga-rosa",
-        "repo": "ccc.nvim",
-        "rev": "3e07b8ffc9dab162cd2940e75601da75ed0cebbe",
-        "type": "github"
-      },
-      "original": {
-        "owner": "uga-rosa",
-        "repo": "ccc.nvim",
-        "type": "github"
-      }
-    },
     "cmp-buffer": {
       "flake": false,
       "locked": {
@@ -271,22 +255,6 @@
         "type": "github"
       }
     },
-    "mkdnflow": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1680474378,
-        "narHash": "sha256-M85FZ1gLplVOF3hKaTAJzSXqqrbKDLburmW8T2eXncY=",
-        "owner": "jakewvincent",
-        "repo": "mkdnflow.nvim",
-        "rev": "5a9768fe09c614600fd2881f29c5cedf931f3e36",
-        "type": "github"
-      },
-      "original": {
-        "owner": "jakewvincent",
-        "repo": "mkdnflow.nvim",
-        "type": "github"
-      }
-    },
     "neo-tree-nvim": {
       "flake": false,
       "locked": {
@@ -405,6 +373,22 @@
       "original": {
         "owner": "hrsh7th",
         "repo": "nvim-cmp",
+        "type": "github"
+      }
+    },
+    "nvim-colorizer-lua": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1677493908,
+        "narHash": "sha256-hShQabr+UafsP+yicWkHycWLTbPhOpRpoa9oTMMVZ9o=",
+        "owner": "NvChad",
+        "repo": "nvim-colorizer.lua",
+        "rev": "dde3084106a70b9a79d48f426f6d6fec6fd203f7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NvChad",
+        "repo": "nvim-colorizer.lua",
         "type": "github"
       }
     },
@@ -540,7 +524,6 @@
       "inputs": {
         "SchemaStore-nvim": "SchemaStore-nvim",
         "alpha-nvim": "alpha-nvim",
-        "ccc-nvim": "ccc-nvim",
         "cmp-buffer": "cmp-buffer",
         "cmp-cmdline": "cmp-cmdline",
         "cmp-nvim-lsp": "cmp-nvim-lsp",
@@ -554,7 +537,6 @@
         "leap-nvim": "leap-nvim",
         "leap-spooky-nvim": "leap-spooky-nvim",
         "luasnip": "luasnip",
-        "mkdnflow": "mkdnflow",
         "neo-tree-nvim": "neo-tree-nvim",
         "neovim-nightly": "neovim-nightly",
         "nixpkgs": "nixpkgs",
@@ -562,6 +544,7 @@
         "nui-nvim": "nui-nvim",
         "nvim-autopairs": "nvim-autopairs",
         "nvim-cmp": "nvim-cmp",
+        "nvim-colorizer-lua": "nvim-colorizer-lua",
         "nvim-lspconfig": "nvim-lspconfig",
         "nvim-notify": "nvim-notify",
         "nvim-treesitter": "nvim-treesitter",
@@ -570,6 +553,7 @@
         "nvim-web-devicons": "nvim-web-devicons",
         "plenary-nvim": "plenary-nvim",
         "popup-nvim": "popup-nvim",
+        "telekasten-nvim": "telekasten-nvim",
         "telescope-nvim": "telescope-nvim",
         "todo-comments-nvim": "todo-comments-nvim",
         "toggleterm-nvim": "toggleterm-nvim",
@@ -602,8 +586,23 @@
         "tree-sitter-toml": "tree-sitter-toml",
         "tree-sitter-typescript": "tree-sitter-typescript",
         "tree-sitter-vim": "tree-sitter-vim",
-        "tree-sitter-yuck": "tree-sitter-yuck",
-        "zk-nvim": "zk-nvim"
+        "tree-sitter-yuck": "tree-sitter-yuck"
+      }
+    },
+    "telekasten-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1680119601,
+        "narHash": "sha256-GxID0OHg8d8KMWPjMIJAIEzIeLmwbtZxgTEVCIQNfQk=",
+        "owner": "renerocksai",
+        "repo": "telekasten.nvim",
+        "rev": "29f80e3abcda22ceaa93fdd887b94060e90f0d43",
+        "type": "github"
+      },
+      "original": {
+        "owner": "renerocksai",
+        "repo": "telekasten.nvim",
+        "type": "github"
       }
     },
     "telescope-nvim": {
@@ -1083,22 +1082,6 @@
       "original": {
         "owner": "Philipp-M",
         "repo": "tree-sitter-yuck",
-        "type": "github"
-      }
-    },
-    "zk-nvim": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1680523118,
-        "narHash": "sha256-WeIjraSYNNIyOWonDtMA1Fs/RuMI+m2RU4bnQcb0J6k=",
-        "owner": "mickael-menu",
-        "repo": "zk-nvim",
-        "rev": "ff3a9661d9054a74d8baa51743c9dc11f8a215c3",
-        "type": "github"
-      },
-      "original": {
-        "owner": "mickael-menu",
-        "repo": "zk-nvim",
         "type": "github"
       }
     }

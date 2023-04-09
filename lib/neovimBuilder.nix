@@ -13,9 +13,8 @@
 		nvim-web-devicons
 		heirline-nvim
 		alpha-nvim
-		ccc-nvim
 		noice-nvim
-		zk-nvim
+		# zk-nvim
 	];
 	optPlugins = with pkgs.neovimPlugins; [
 		nvim-ts-autotag
@@ -43,7 +42,9 @@
 		cmp_luasnip
 		friendly-snippets
 		luasnip
-		mkdnflow
+		# mkdnflow
+		telekasten-nvim
+		nvim-colorizer-lua
 	];
 in wrapNvcode myNeovimUnwrapped {
 	viAlias = true;
