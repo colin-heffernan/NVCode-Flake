@@ -8,6 +8,5 @@ require("nvcode.notify")
 require("nvcode.colorscheme")
 require("nvcode.heirline")
 require("nvcode.noice")
---[[ require("nvcode.zk") ]]
 require("nvcode.lazyload")
 require("nvcode.alpha")

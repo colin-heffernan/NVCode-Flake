@@ -4,7 +4,6 @@ local function onFileOpen()
 	require("nvcode.indentblankline")
 	require("nvcode.treesitter")
 	require("nvcode.gitsigns")
-	--[[ require("nvcode.mkdnflow") ]]
 	require("nvcode.comment")
 	require("nvcode.todo")
 	require("nvcode.leap")
