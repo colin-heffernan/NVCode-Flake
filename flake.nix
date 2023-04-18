@@ -8,8 +8,8 @@
 
 		# Neovim Nightly
 		neovim-nightly = {
-			# url = "github:neovim/neovim?dir=contrib";
-			url = "github:neovim/neovim?dir=contrib&rev=eac75a971d042bd610310314e6c64097694ee418";
+			url = "github:neovim/neovim?dir=contrib";
+			# url = "github:neovim/neovim?dir=contrib&rev=eac75a971d042bd610310314e6c64097694ee418";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
 
