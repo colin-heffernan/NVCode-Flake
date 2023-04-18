@@ -9,12 +9,12 @@
 	startPlugins = with pkgs.neovimPlugins; [
 		tokyonight-nvim
 		nui-nvim
+		plenary-nvim
 		nvim-notify
 		nvim-web-devicons
 		heirline-nvim
 		alpha-nvim
 		noice-nvim
-		# zk-nvim
 	];
 	optPlugins = with pkgs.neovimPlugins; [
 		nvim-ts-autotag
@@ -24,7 +24,6 @@
 		cmp-buffer
 		cmp-cmdline
 		nvim-cmp
-		plenary-nvim
 		popup-nvim
 		neo-tree-nvim
 		indent-blankline-nvim
@@ -42,8 +41,7 @@
 		cmp_luasnip
 		friendly-snippets
 		luasnip
-		# mkdnflow
-		telekasten-nvim
+		mkdnflow
 		nvim-colorizer-lua
 	];
 in wrapNvcode myNeovimUnwrapped {

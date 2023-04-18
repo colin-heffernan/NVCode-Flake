@@ -255,6 +255,22 @@
         "type": "github"
       }
     },
+    "mkdnflow": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1680474378,
+        "narHash": "sha256-M85FZ1gLplVOF3hKaTAJzSXqqrbKDLburmW8T2eXncY=",
+        "owner": "jakewvincent",
+        "repo": "mkdnflow.nvim",
+        "rev": "5a9768fe09c614600fd2881f29c5cedf931f3e36",
+        "type": "github"
+      },
+      "original": {
+        "owner": "jakewvincent",
+        "repo": "mkdnflow.nvim",
+        "type": "github"
+      }
+    },
     "neo-tree-nvim": {
       "flake": false,
       "locked": {
@@ -537,6 +553,7 @@
         "leap-nvim": "leap-nvim",
         "leap-spooky-nvim": "leap-spooky-nvim",
         "luasnip": "luasnip",
+        "mkdnflow": "mkdnflow",
         "neo-tree-nvim": "neo-tree-nvim",
         "neovim-nightly": "neovim-nightly",
         "nixpkgs": "nixpkgs",
@@ -553,7 +570,6 @@
         "nvim-web-devicons": "nvim-web-devicons",
         "plenary-nvim": "plenary-nvim",
         "popup-nvim": "popup-nvim",
-        "telekasten-nvim": "telekasten-nvim",
         "telescope-nvim": "telescope-nvim",
         "todo-comments-nvim": "todo-comments-nvim",
         "toggleterm-nvim": "toggleterm-nvim",
@@ -587,22 +603,6 @@
         "tree-sitter-typescript": "tree-sitter-typescript",
         "tree-sitter-vim": "tree-sitter-vim",
         "tree-sitter-yuck": "tree-sitter-yuck"
-      }
-    },
-    "telekasten-nvim": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1680119601,
-        "narHash": "sha256-GxID0OHg8d8KMWPjMIJAIEzIeLmwbtZxgTEVCIQNfQk=",
-        "owner": "renerocksai",
-        "repo": "telekasten.nvim",
-        "rev": "29f80e3abcda22ceaa93fdd887b94060e90f0d43",
-        "type": "github"
-      },
-      "original": {
-        "owner": "renerocksai",
-        "repo": "telekasten.nvim",
-        "type": "github"
       }
     },
     "telescope-nvim": {

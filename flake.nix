@@ -151,16 +151,8 @@
 		};
 
 		# Notes
-		# mkdnflow = {
-		# 	url = "github:jakewvincent/mkdnflow.nvim";
-		# 	flake = false;
-		# };
-		# zk-nvim = {
-		# 	url = "github:mickael-menu/zk-nvim";
-		# 	flake = false;
-		# };
-		telekasten-nvim = {
-			url = "github:renerocksai/telekasten.nvim";
+		mkdnflow = {
+			url = "github:jakewvincent/mkdnflow.nvim";
 			flake = false;
 		};
 
@@ -314,6 +306,8 @@
 				"tokyonight-nvim"
 				"heirline-nvim"
 				"alpha-nvim"
+				"dashboard-nvim"
+				"veil-nvim"
 				"noice-nvim"
 				"neo-tree-nvim"
 				"telescope-nvim"
@@ -333,9 +327,8 @@
 				"nvim-ts-autotag"
 				"gitsigns-nvim"
 				"indent-blankline-nvim"
-				# "mkdnflow"
-				# "zk-nvim"
-				"telekasten-nvim"
+				"mkdnflow"
+				# "telekasten-nvim"
 				"comment-nvim"
 				"nvim-ts-context-commentstring"
 				"todo-comments-nvim"

@@ -8,6 +8,7 @@ local function onFileOpen()
 	require("nvcode.todo")
 	require("nvcode.leap")
 	require("nvcode.colorizer")
+	require("nvcode.mkdnflow")
 end
 
 vim.api.nvim_create_autocmd(
@@ -19,9 +20,9 @@ vim.api.nvim_create_autocmd(
 
 -- Load configs for lazyloaded plugins on InsertEnter
 local function onInsert()
-	require("nvcode.autopairs")
 	require("nvcode.cmp.cmdline")
 	require("nvcode.cmp.file")
+	require("nvcode.autopairs")
 end
 
 vim.api.nvim_create_autocmd(
@@ -165,7 +166,7 @@ vim.api.nvim_create_user_command(
 	}
 )
 
-vim.api.nvim_create_user_command(
+--[[ vim.api.nvim_create_user_command(
 	"Telekasten",
 	function(event)
 		local command = {
@@ -203,4 +204,4 @@ vim.api.nvim_create_user_command(
 			return vim.fn.getcompletion(line, "cmdline")
 		end
 	}
-)
+) ]]

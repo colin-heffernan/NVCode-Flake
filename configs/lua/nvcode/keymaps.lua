@@ -33,7 +33,7 @@ keymap("t", "<C-Esc>", "<C-\\><C-n>:ToggleTerm<CR>", opts)
 -- Search
 keymap("n", "<Space>f", ":Telescope find_files hidden=true<CR>", opts)
 keymap("n", "<Space>o", ":Telescope oldfiles<CR>", opts)
-keymap("n", "<Space>n", ":ZkTags<CR>", opts)
+--[[ keymap("n", "<Space>n", ":ZkTags<CR>", opts) ]]
 
 -- Visual
 -- Indents

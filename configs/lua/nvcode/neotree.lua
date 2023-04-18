@@ -27,5 +27,8 @@ nvim_tree.setup {
 			hide_dotfiles = false,
 			hide_gitignored = false
 		}
-	}
+	},
+	--[[ source_selector = {
+		winbar = true
+	} ]]
 }

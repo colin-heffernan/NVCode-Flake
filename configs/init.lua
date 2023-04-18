@@ -10,3 +10,5 @@ require("nvcode.heirline")
 require("nvcode.noice")
 require("nvcode.lazyload")
 require("nvcode.alpha")
+--[[ require("nvcode.dashboard") ]]
+--[[ require("nvcode.veil") ]]
