@@ -1,9 +1,11 @@
 -- Options
-vim.o.cmdheight = 2					-- 2-row command line
+-- vim.o.cmdheight = 2					-- 2-row command line
+vim.o.clipboard = "unnamedplus"				-- Use system clipboard
 vim.o.completeopt = "menuone,noselect"			-- [FOR CMP, IDK WHAT IT DOES]
-vim.o.cursorline = false					-- Highlight cursor line
+vim.o.cursorline = false				-- Highlight cursor line
 vim.o.ignorecase = true					-- Ignore case in search patterns
 vim.o.laststatus = 3					-- Global status line
+vim.o.list = true					-- Show invisible chars
 vim.o.number = true					-- Numbered lines
 vim.o.numberwidth = 4					-- Line number column width
 vim.o.pumheight = 10					-- Popup menu height
@@ -14,6 +16,7 @@ vim.o.showtabline = 0					-- Never show tab line
 vim.o.signcolumn = "yes"				-- Always show sign column
 vim.o.smartcase = true					-- Smart case
 vim.o.smartindent = true				-- Smart indent
+-- vim.o.spelllang = { "en" }				-- Spellcheck
 vim.o.swapfile = false					-- Disable swapfile
 vim.o.termguicolors = true				-- Enable terminal colors
 vim.o.undofile = true					-- Persistent undo
