@@ -373,7 +373,8 @@
 					(final: prev: {
 						neovim-unwrapped = neovim-nightly.packages.${prev.system}.neovim.overrideAttrs (old: {
 							patches = builtins.filter (p:
-								(if builtins.typeOf p == "set" then baseNameOf p.name else baseNameOf) != "neovim-build-make-generated-source-files-reproducible.patch")
+								# (if builtins.typeOf p == "set" then baseNameOf p.name else baseNameOf) != "neovim-build-make-generated-source-files-reproducible.patch")
+								(if builtins.typeOf p == "set" then baseNameOf p.name else baseNameOf) != "use-the-correct-replacement-args-for-gsub-directive.patch")
 							old.patches;
 						});
 						# neovim-unwrapped = neovim-nightly.packages.${prev.system}.neovim;
