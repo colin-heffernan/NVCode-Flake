@@ -7,6 +7,7 @@ if not plugin_status_ok then
 end
 
 tokyonight.setup {
+	transparent = true,
 	on_highlights = function(hl, c)
 		hl.TelescopeNormal = {
 			bg = c.bg_dark,
